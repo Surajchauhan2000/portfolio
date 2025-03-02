@@ -57,8 +57,8 @@ const String ksSlash = "/";
 const String ksLetsWork = "Let's work together!";
 const String ksFreelanceAvailability = "I'm available for Freelancing";
 const String ksContactInfo = "- Contact Info";
-const String ksWorkEmail = "yelwinoo.work@gmail.com";
-const String ksWorkPhone = "+959 976294818";
+const String ksWorkEmail = "shining.surajchauhan@gmail.com";
+const String ksWorkPhone = "+91 9785700328";
 const String ksCreditTo = "- Big Thanks";
 const String ksDavidCobbina = "David Cobbina";
 const String ksDavidCobbinaWebsite = "https://davidcobbina.com/";
@@ -271,22 +271,8 @@ const String _kurtCobain = "Kurt Cobain";
 const String _jamesClear = "James Clear";
 final List<Quote> ksQuotes = [
   Quote(
-    name:
-        "Our virtues and our failings are inseparable, like force and matter. When they separate, man is no more.",
-    author: _nikolaTesla,
-  ),
-  Quote(
-    name:
-        "I’m not a great programmer. I’m just a good programmer with great habits.",
-    author: _kentBeck,
-  ),
-  Quote(
     name: "I'm generally a very pragmatic person: that which works, works.",
     author: _linusTorvalds,
-  ),
-  Quote(
-    name: "Premature optimization is the root of all evil.",
-    author: _donaldKnuth,
   ),
   Quote(
     name:
@@ -294,37 +280,12 @@ final List<Quote> ksQuotes = [
     author: _donaldKnuth,
   ),
   Quote(
-    name: "A person who never made a mistake never tried anything new.",
-    author: _albertEinstein,
-  ),
-  Quote(
     name: "I have no special talent. I am only passionately curious.",
     author: _albertEinstein,
   ),
   Quote(
-    name:
-        "Sometimes it is the people who no one imagines anything of who do the things that no one can imagine.",
-    author: _alanTuring,
-  ),
-  Quote(
-    name: "Life is what happens when you're busy making other plans.",
-    author: _johnLennon,
-  ),
-  Quote(
-    name: "The duty of youth is to challenge corruption.",
-    author: _kurtCobain,
-  ),
-  Quote(
     name: "Stay hungry, stay foolish.",
     author: _steveJobs,
-  ),
-  Quote(
-    name: "It's hard to build momentum if you're dividing your attention.",
-    author: _jamesClear,
-  ),
-  Quote(
-    name: "Deconstruction creates knowledge. Recombination creates value.",
-    author: _jamesClear,
   ),
 ];
 

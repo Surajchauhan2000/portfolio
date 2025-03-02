@@ -25,7 +25,7 @@ class TucoYe extends StatelessWidget {
   Widget build(BuildContext context) {
     return Layout(
       child: MaterialApp(
-        title: 'Suraj portfolio',
+        title: 'Portfolio',
         scrollBehavior: AppScrollBehavior(),
         debugShowCheckedModeBanner: false,
         theme: context.theme(),

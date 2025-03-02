@@ -10,7 +10,7 @@ class RouteGen {
       case Routes.home:
         return _buildRoute(const HomePage(), settings: settings);
       case Routes.projects:
-      //return _buildRoute(const ProjectsView(), settings: settings);
+      // return _buildRoute(const ProjectsView(), settings: settings);
       case Routes.projectDetails:
         return _buildRoute(Container()
             // ProjectDetailsView(
