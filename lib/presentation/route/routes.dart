@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/presentation/views/projects/projects_view.dart';
 
 import '../views/home/home_page.dart';
 import 'route_transitions.dart';
@@ -10,7 +11,7 @@ class RouteGen {
       case Routes.home:
         return _buildRoute(const HomePage(), settings: settings);
       case Routes.projects:
-      // return _buildRoute(const ProjectsView(), settings: settings);
+        return _buildRoute(const ProjectsView(), settings: settings);
       case Routes.projectDetails:
         return _buildRoute(Container()
             // ProjectDetailsView(
