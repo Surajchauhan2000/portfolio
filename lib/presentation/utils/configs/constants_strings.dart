@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../data/model/experience.dart';
 import '../../../data/model/project_info.dart';
 import '../../../data/model/quote.dart';
 import '../../../data/model/route_model.dart';
@@ -158,78 +159,104 @@ const String ksActivities = "Activities I've joined";
 //   ),
 // ];
 //
-// final List<Experience> ksExperiences = [
-//   Experience(
-//     company: "Simbolo Learning Platform",
-//     position: "Flutter Instructor",
-//     responsibilities: [
-//       "Taught over 30 students (batch 1 & batch 2)",
-//       "Taught basic Dart Programming Language",
-//       "Taught basic Flutter Widgets",
-//       "Taught Provider & GetX state managements",
-//       "Taught Networking and Local Storage",
-//       "Taught Clean Code Principles and 5 Design Patterns",
-//     ],
-//     startDate: DateTime(2023, 11),
-//     endDate: DateTime.now(),
-//   ),
-//   Experience(
-//     company: "AYA Inno Labs (AYA Bank)",
-//     position: "Senior Flutter Developer",
-//     responsibilities: [
-//       "Software house of the second largest commercial bank in Myanamar",
-//       "Closely collaborated with mobile developers, backend developers, UI/ UX designers and QA team for AYA Pay v3.0 Lite App",
-//       """Mainly responsible for
-//         ● Project Architecture
-//         ● Authentication flow,
-//         ● OCR Scanning,
-//         ● Third-party payments,
-//         ● Vouchers, Deals & Rewards
-//         ● Transaction history
-//         """,
-//       "Maintain AYA Pay Partner App used by tens of thousands of users",
-//     ],
-//     startDate: DateTime(2022, 9),
-//     endDate: DateTime.now(),
-//   ),
-//   Experience(
-//     company: "Nexus Hub Solution",
-//     position: "Mid-Senior Flutter Developer",
-//     responsibilities: [
-//       "Lead a team of 2 Flutter developers and worked closely with backend developer and UI/UX designers",
-//       "Started learning Appwrite, Mobx and dynamic modelling in Flutter",
-//       "Contributed in Music Player app, HR Management System and E-commerce app",
-//       "Worked closely with UI/UX designer & Backend developer in developing Travel Agency Proprietary System",
-//     ],
-//     startDate: DateTime(2022, 9),
-//     endDate: DateTime(2023, 4),
-//   ),
-//   Experience(
-//     company: "App.com.mm",
-//     position: "Mid-Senior Flutter Developer",
-//     responsibilities: [
-//       "Lead and trained a team of 3 Flutter developers in developing mobile applications",
-//       "Contributed features in Blogging app & E-commerce app",
-//       "Worked on the delivery service mobile app",
-//     ],
-//     startDate: DateTime(2022, 5),
-//     endDate: DateTime(2022, 9),
-//   ),
-//   Experience(
-//     company: "7r48",
-//     position: "Junior Flutter Developer",
-//     responsibilities: [
-//       "Started learning Flutter, GetX, Provider, Bloc and implementing small projects using Flutter",
-//       "Worked closely with senior mobile developer and backend developer to develop Kaung Myat Denti Dental Clinic System mobile app",
-//       "Worked on car service management system mobile app",
-//       "Architected and implemented small projects such as TOTO lottery prediction app using AI backend using python",
-//       "Implemented small python AI projects - Activity Recognition, Driver Drowsiness Detection, Football match prediction, JSON to excel file converter"
-//     ],
-//     type: JobType.remote,
-//     startDate: DateTime(2019, 10),
-//     endDate: DateTime(2022, 12),
-//   ),
-// ];
+final List<Experience> ksExperiences = [
+  Experience(
+    company: "Faircado (Second hand alternative)",
+    position: "Front-end Developer",
+    responsibilities: [
+      "Develop a cross platform mobile application using flutter with multi lang., enabling user to discover and purchase second-hand product effortlessly. ",
+      "Integrate Google and Apple Authentication for secure and fast login using firebase.",
+      "Users can upload an image, can type the product name to get instant search results.",
+      "Integrated a high-performance Search API to deliver fast and accurate product search results.",
+      "App suggests similar products using image recognition.",
+      "Uses Riverpod for state management, ensuring dynamic UI updates.",
+      "Developed a `Favorite Products` feature in mobile application. Users can add/ remove products from favorites section by simply clicking heart icon.",
+      "Developed a seamless onboarding experience and user profile management system with multilingual support.",
+      "Implemented a smart notification system to alert users when a previously unavailable product becomes available."
+    ],
+    startDate: DateTime(2024, 06),
+    endDate: DateTime(2024, 10),
+  ),
+  Experience(
+    company: "NAIARA App – AI-Powered Chatbot Platform",
+    position: "Full-stack developer",
+    responsibilities: [
+      "In today’s fast-paced world, efficiency is everything, such that we will developed a feature-rich mobile application integrating AI-driven bots to enhance user experience across various domains.",
+      "In the NAIARA App, multiple chatbots are integrated, each serving a different purpose.",
+      ("""Chat Bots
+        ● Personal Assistant/ Secretory bots:
+          - In the Personal Assistant Bot of the NAIARA App, various Google APIs have been integrated to 
+            enhance productivity and streamline daily tasks:
+          - In the Personal Assistant Bot, users can send and receive emails, fetch the latest unread emails, 
+            forward, and delete emails effortlessly without leaving the bot.
+          - The user can schedule meetings and calendar events with attendees on a specific date and time,
+            and a meeting link will be automatically generated and sent as a notification to the attendees.
+          - User will be able generate structured Google Docs by providing a summary or brief notes on any 
+            topic, making content creation seamless and efficient.
+          - Also user can create a perform CURD operation to his Google task and notes.
+          
+        ● Travel Bots:
+          - The Travel Bot allows users to effortlessly search for flights between two locations, specify the 
+            number of passengers, specific dates and book their tickets—all within the chatbot interface.
+          - Integrate different seating arrangements based on different flights like Indigo, SpiceJet ..
+          - User can book their flight either One-way or round trip.
+          - Implement radix Database for fast access flights from DB and show to the user.
+          
+        ● Hotel Bots:
+          - The Hotel Bot allows users to effortlessly search for hotels on a specific dates and number of
+            passengers.
+          
+        ● Shopper Bots:
+          - Shopper bots allow the Users simply type a product name or upload an image, and our AI Shopper 
+            Bot fetches results instantly.
+          - Users can view detailed product information, including price, ratings, and specifications, select 
+            multiple products, and seamlessly proceed to checkout.
+          - Uses Riverpod for state management, ensuring dynamic price and other UI updates.
+        """),
+      "Implement firebase authentication including Google SSO, Apple, Microsoft and etc with fast and securely login.",
+      "Integrate MongoDB database where user can perform CRUD operation."
+    ],
+    startDate: DateTime(2024, 10),
+    endDate: DateTime.now(),
+  ),
+  Experience(
+    company: "Nexus Hub Solution",
+    position: "Mid-Senior Flutter Developer",
+    responsibilities: [
+      "Lead a team of 2 Flutter developers and worked closely with backend developer and UI/UX designers",
+      "Started learning Appwrite, Mobx and dynamic modelling in Flutter",
+      "Contributed in Music Player app, HR Management System and E-commerce app",
+      "Worked closely with UI/UX designer & Backend developer in developing Travel Agency Proprietary System",
+    ],
+    startDate: DateTime(2022, 9),
+    endDate: DateTime(2023, 4),
+  ),
+  Experience(
+    company: "App.com.mm",
+    position: "Mid-Senior Flutter Developer",
+    responsibilities: [
+      "Lead and trained a team of 3 Flutter developers in developing mobile applications",
+      "Contributed features in Blogging app & E-commerce app",
+      "Worked on the delivery service mobile app",
+    ],
+    startDate: DateTime(2022, 5),
+    endDate: DateTime(2022, 9),
+  ),
+  Experience(
+    company: "7r48",
+    position: "Junior Flutter Developer",
+    responsibilities: [
+      "Started learning Flutter, GetX, Provider, Bloc and implementing small projects using Flutter",
+      "Worked closely with senior mobile developer and backend developer to develop Kaung Myat Denti Dental Clinic System mobile app",
+      "Worked on car service management system mobile app",
+      "Architected and implemented small projects such as TOTO lottery prediction app using AI backend using python",
+      "Implemented small python AI projects - Activity Recognition, Driver Drowsiness Detection, Football match prediction, JSON to excel file converter"
+    ],
+    type: JobType.remote,
+    startDate: DateTime(2019, 10),
+    endDate: DateTime(2022, 12),
+  ),
+];
 //
 // final List<Certificate> ksCertificateList = [
 //   Certificate(
