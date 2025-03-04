@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/presentation/views/projects/projects_view.dart';
 
+import '../views/experience/experience_view.dart';
 import '../views/home/home_page.dart';
 import 'route_transitions.dart';
 
@@ -12,17 +13,17 @@ class RouteGen {
         return _buildRoute(const HomePage(), settings: settings);
       case Routes.projects:
         return _buildRoute(const ProjectsView(), settings: settings);
-      case Routes.projectDetails:
-        return _buildRoute(Container()
-            // ProjectDetailsView(
-            //   project: arguments as ShowcaseProject,
-            // ),
-            // settings: RouteSettings(
-            //   name: '${settings.name}/${arguments.title}',
-            // ),
-            );
+      // case Routes.projectDetails:
+      //   return _buildRoute(Container()
+      //       ProjectDetailsView(
+      //         project: arguments as ShowcaseProject,
+      //       ),
+      //       settings: RouteSettings(
+      //         name: '${settings.name}/${arguments.title}',
+      //       ),
+      //       );
       case Routes.experience:
-      // return _buildRoute(const ExperienceView(), settings: settings);
+        return _buildRoute(const ExperienceView(), settings: settings);
       case Routes.certificates:
       // return _buildRoute(const CertificatesView(), settings: settings);
       case Routes.about:
