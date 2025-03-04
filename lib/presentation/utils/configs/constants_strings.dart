@@ -37,7 +37,6 @@ const String ksSayHello = "Just say Hello to collaborate!";
 const String ksHome = "Home";
 const String ksAbout = "About";
 const String ksExperience = "My Experience";
-const String ksCertificates = "Certificates";
 const String ksProject = "My Projects";
 const String ksViewProject = "View Project";
 const String ksCraftedWithLove = "Crafted with Love";
@@ -120,7 +119,6 @@ final List<RouteModel> ksMenu = [
   RouteModel(label: ksHome, route: Routes.home),
   RouteModel(label: ksProject, route: Routes.projects),
   RouteModel(label: ksExperience, route: Routes.experience),
-  RouteModel(label: ksCertificates, route: Routes.certificates),
   RouteModel(label: ksAbout, route: Routes.about),
   RouteModel(label: ksContact, route: Routes.contact),
 ];
@@ -220,42 +218,42 @@ final List<Experience> ksExperiences = [
     endDate: DateTime.now(),
   ),
   Experience(
-    company: "Nexus Hub Solution",
-    position: "Mid-Senior Flutter Developer",
+    company: "OpenBot",
+    position: "Web development",
     responsibilities: [
-      "Lead a team of 2 Flutter developers and worked closely with backend developer and UI/UX designers",
-      "Started learning Appwrite, Mobx and dynamic modelling in Flutter",
-      "Contributed in Music Player app, HR Management System and E-commerce app",
-      "Worked closely with UI/UX designer & Backend developer in developing Travel Agency Proprietary System",
+      "Developed and fine-tuned AI model for real-time object detection and path planning.",
+      "Design free and membership plan UI to the user.",
+      "Integrate stripe payment integration.",
+      "Design OpenBot chatBot such that user will chat about robots and discuss about how to control robots.",
     ],
-    startDate: DateTime(2022, 9),
-    endDate: DateTime(2023, 4),
+    startDate: DateTime(2024, 2),
+    endDate: DateTime(2024, 6),
   ),
-  Experience(
-    company: "App.com.mm",
-    position: "Mid-Senior Flutter Developer",
-    responsibilities: [
-      "Lead and trained a team of 3 Flutter developers in developing mobile applications",
-      "Contributed features in Blogging app & E-commerce app",
-      "Worked on the delivery service mobile app",
-    ],
-    startDate: DateTime(2022, 5),
-    endDate: DateTime(2022, 9),
-  ),
-  Experience(
-    company: "7r48",
-    position: "Junior Flutter Developer",
-    responsibilities: [
-      "Started learning Flutter, GetX, Provider, Bloc and implementing small projects using Flutter",
-      "Worked closely with senior mobile developer and backend developer to develop Kaung Myat Denti Dental Clinic System mobile app",
-      "Worked on car service management system mobile app",
-      "Architected and implemented small projects such as TOTO lottery prediction app using AI backend using python",
-      "Implemented small python AI projects - Activity Recognition, Driver Drowsiness Detection, Football match prediction, JSON to excel file converter"
-    ],
-    type: JobType.remote,
-    startDate: DateTime(2019, 10),
-    endDate: DateTime(2022, 12),
-  ),
+  // Experience(
+  //   company: "App.com.mm",
+  //   position: "Mid-Senior Flutter Developer",
+  //   responsibilities: [
+  //     "Lead and trained a team of 3 Flutter developers in developing mobile applications",
+  //     "Contributed features in Blogging app & E-commerce app",
+  //     "Worked on the delivery service mobile app",
+  //   ],
+  //   startDate: DateTime(2022, 5),
+  //   endDate: DateTime(2022, 9),
+  // ),
+  // Experience(
+  //   company: "7r48",
+  //   position: "Junior Flutter Developer",
+  //   responsibilities: [
+  //     "Started learning Flutter, GetX, Provider, Bloc and implementing small projects using Flutter",
+  //     "Worked closely with senior mobile developer and backend developer to develop Kaung Myat Denti Dental Clinic System mobile app",
+  //     "Worked on car service management system mobile app",
+  //     "Architected and implemented small projects such as TOTO lottery prediction app using AI backend using python",
+  //     "Implemented small python AI projects - Activity Recognition, Driver Drowsiness Detection, Football match prediction, JSON to excel file converter"
+  //   ],
+  //   type: JobType.remote,
+  //   startDate: DateTime(2019, 10),
+  //   endDate: DateTime(2022, 12),
+  // ),
 ];
 //
 // final List<Certificate> ksCertificateList = [

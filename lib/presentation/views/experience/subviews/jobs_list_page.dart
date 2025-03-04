@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/presentation/utils/extensions/context_ex.dart';
 import 'package:portfolio/presentation/utils/extensions/layout_adapter_ex.dart';
-import 'package:portfolio/presentation/utils/extensions/string_ex.dart';
 import 'package:portfolio/presentation/utils/extensions/widget_ex.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-import '../../../utils/configs/constant_color.dart';
 import '../../../utils/configs/constant_sizes.dart';
 import '../../../utils/configs/constants_strings.dart';
-import '../../../widgets/animated_text_slide_box_transition.dart';
 import '../widgets/experience_step_card.dart';
 
 class JobsListPage extends StatefulWidget {
@@ -79,45 +76,6 @@ class _JobsListPageState extends State<JobsListPage>
             );
           },
         ).toList(),
-        VisibilityDetector(
-          key: const ValueKey("freelancing"),
-          onVisibilityChanged: (info) {
-            if (info.visibleFraction > 0.4) {
-              _textController.forward();
-            }
-          },
-          child: AnimatedTextSlideBoxTransition(
-            controller: _textController,
-            text: ksWhatElse.addDoubleQuote(),
-            maxLines: 4,
-            textStyle: context.adaptive(
-              Theme.of(context).textTheme.bodySmall,
-              Theme.of(context).textTheme.titleMedium,
-            ),
-            textAlign: TextAlign.center,
-            coverColor: kPrimary,
-          ).addPadding(
-            edgeInsets: context.percentPadding(
-              t: s5,
-            ),
-          ),
-        ),
-        verticalSpaceMedium,
-        AnimatedTextSlideBoxTransition(
-          controller: _textController,
-          text: ksSayHello.addDoubleQuote(),
-          maxLines: 3,
-          textStyle: context
-              .adaptive(
-                Theme.of(context).textTheme.bodySmall,
-                Theme.of(context).textTheme.titleSmall,
-              )
-              ?.copyWith(
-                fontWeight: FontWeight.w300,
-              ),
-          textAlign: TextAlign.center,
-          coverColor: kPrimary,
-        ),
       ]
           .addColumn()
           .addPadding(
