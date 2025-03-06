@@ -54,6 +54,7 @@ class BackgroundInfo extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           verticalSpaceSmall,
+          verticalSpaceSmall,
           Text(
             ksProfession,
             style: Theme.of(context).textTheme.bodyLarge,

@@ -10,10 +10,7 @@ import '../../../utils/configs/constant_color.dart';
 import '../../../utils/configs/constant_sizes.dart';
 import '../../../utils/configs/constants_strings.dart';
 import '../../../widgets/animated_horizontal_stick.dart';
-import '../../../widgets/animated_outlined_text.dart';
-import '../../../widgets/animated_stroke_text.dart';
 import '../../../widgets/animated_text_slide_box_transition.dart';
-import 'wave_path.dart';
 
 class Overall extends StatefulWidget {
   const Overall({super.key});
@@ -165,18 +162,6 @@ class _OverallState extends State<Overall> with TickerProviderStateMixin {
           ),
         Positioned(
           top: context.percentHeight(s10),
-          left: context.percentWidth(s8),
-          child: AnimatedOutlinedText(
-            text: ksIm,
-            fontSize: context.adaptive(s14, s80),
-            strokeWidth: context.adaptive(0.3, s4),
-            strokeColor: kTeal200,
-            animation: introColorTween,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-        Positioned(
-          top: context.percentHeight(s10),
           right: context.percentWidth(s8),
           child: <Widget>[
             AnimatedTextSlideBoxTransition(
@@ -192,102 +177,6 @@ class _OverallState extends State<Overall> with TickerProviderStateMixin {
               controller: _stickController,
             ),
           ].addRow(),
-        ),
-        Positioned(
-          top: context.percentHeight(s18),
-          left: context.percentWidth(s18),
-          child: SlideTransition(
-            position: slideLeftTween,
-            child: AnimatedOutlinedText(
-              text: ksTechNerd.toUpperCase(),
-              fontSize: context.adaptive(s30, s100),
-              strokeWidth: context.adaptive(s6, s18),
-              letterSpacing: 2.5,
-              strokeColor: kSecondary,
-              animation: transparentColorTween,
-              fontWeight: FontWeight.w900,
-            ),
-          ),
-        ),
-        Positioned(
-          top: context.percentHeight(s32),
-          left: context.percentWidth(s4),
-          child: SlideTransition(
-            position: slideRightTween,
-            child: AnimatedOutlinedText(
-              text: coffeeAddict.toUpperCase(),
-              fontSize: context.adaptive(s28, s120),
-              strokeColor: kCoffee,
-              fontWeight: FontWeight.w700,
-              animation: coffeeColorTween,
-            ),
-          ),
-        ),
-        Positioned(
-          top: context.percentHeight(s48),
-          right: context.percentWidth(s8),
-          child: AnimatedStrokeText(
-            text: "Ai Enthustic",
-            fontSize: context.adaptive(s24, s70),
-            strokeWidth: s1,
-            letterSpacing: s10,
-            fontWeight: FontWeight.w900,
-            animation: blackStrokeColorTween,
-            textColor: kTransparent,
-          ),
-        ),
-        Positioned(
-          bottom: context.percentHeight(s1),
-          right: context.percentHeight(s3),
-          child: <Widget>[
-            Container(
-              width: s10,
-              height: s10,
-              decoration: BoxDecoration(
-                color: kCoffee,
-                shape: BoxShape.circle,
-              ),
-            ),
-            horizontalSpaceMedium,
-            AnimatedStrokeText(
-              text: ksIntrovert.toUpperCase(),
-              fontSize: context.adaptive(s20, s30),
-              strokeWidth: s1,
-              letterSpacing: s2,
-              fontWeight: FontWeight.w900,
-              animation: strokeColorTween,
-              textColor: kTransparent,
-            ),
-          ].addRow(
-            mainAxisSize: MainAxisSize.min,
-          ),
-        ),
-        Positioned(
-          bottom: context.percentHeight(context.adaptive(s30, s8)),
-          left: context.percentWidth(context.adaptive(s30, s10)),
-          child: SlideTransition(
-            position: slideUpTween,
-            child: AnimatedOutlinedText(
-              text: ksFlutterDev.toUpperCase(),
-              fontSize: context.adaptive(s40, s180),
-              maxLines: 2,
-              strokeWidth: context.adaptive(0.3, s4),
-              strokeColor: kSecondary,
-              animation: colorTween,
-              fontWeight: FontWeight.w900,
-            ),
-          ),
-        ),
-        Positioned(
-          bottom: context.percentHeight(s20),
-          left: context.percentWidth(s6),
-          child: WavePath(
-            color: kCoffee,
-            animation: waveTween,
-          ).addSizedBox(
-            width: context.percentWidth(s10),
-            height: s30,
-          ),
         ),
       ].addStack().addSizedBox(
             width: context.screenWidth,

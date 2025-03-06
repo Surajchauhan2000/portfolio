@@ -73,12 +73,12 @@ const String ksSpecialization =
 const String ksWhoAmI = 'Who Am I?';
 const String ksWhatILove = "What I Love To Do";
 const String ksBriefAboutMe =
-    "Hi! I'm a Full-stack Software Engineer who is passionate about emerging Technologies and AI. I have fairly extensive amount of experience in developing high quality applications.";
+    "Hi! this is Suraj chauhan, I'm a Full-stack Software Engineer who is passionate about emerging Technologies and AI. Well-qualified Developer familiar with wide range of programming utilities and languages.  I have fairly extensive 1+ year of experience in developing and building high quality dynamic and scalable web and mobile applications.";
 const String ksMyLife =
-    "I am Post graduate student from the NIT kurukshetra of Computer Applications, Kurukshetra, Haryana.  I dropped out in 2020 because of Military Coup & COVID-19.";
+    "I completed my post-graduation in Computer Applications from NIT Kurukshetra, Haryana, in 2024.";
 
 const String ksProfession =
-    "I started working as a Flutter Developer since 2019. Later, I fell in love with it. I'm eager to contribute in Flutter community. Recently, I've published my first state management package: Pulse-X and animated button library: Pretty Animated Buttons.";
+    "I started working as a Full-stack Developer since 2024. I'm eager to contribute in different projects. Recently, I've worked on two project Faircado (Second hand alternative) and NAIARA - APP (AI powered chatBot) where i worked as a front -end and back-end developer. I am passionate about website and mobile application development.";
 
 const String ksMyTools =
     "I use a bunch of tools and technologies to make design and implementation process easier. ";
@@ -91,18 +91,14 @@ final List<String> ksMobileTech = ['Flutter', 'Dart'];
 final List<String> ksWebTech = [
   'HTML',
   'CSS',
-  'Three Js',
-  'C',
+  'JavaScript',
+  'Express.js',
+  'React',
+  'Node.js',
   'Java',
+  'GoLand'
 ];
-final List<String> ksOtherTech = [
-  'Firebase',
-  'GraphQL',
-  'Appwrite',
-  'MongoDB',
-  'SQL',
-  'Python',
-];
+final List<String> ksOtherTech = ['Firebase', 'MongoDB', 'SQL', 'Radix'];
 
 const String ksCoding = "Software Engineering";
 const String ksCodingMobile = "Software\nEngineering";
@@ -124,11 +120,13 @@ final List<RouteModel> ksMenu = [
 
 const String ksAwardsAndActivities = "Awards & Activities";
 const String ksAward = "Award I've won";
-const String ksAwardName = "Design Award by WIT (Web Innovative Talent Award)";
+const String ksAwardName =
+    "Blind coding context (Apex  institute of management and Science)";
 const String ksAwardLink = "https://witaward.com/result/2020";
 const String ksAwardDetails = """
-- The biggest web development contest in Myanmar ( collaboration with Japan )
-- This project aims for foreigners and Myanmar citizens who are enthusiastic about Myanmar culture, cuisine, handicrafts and who want to pay a visit to famous places in Myanmar and who want to enhance their knowledge about various ethnic groups in Myanmar.
+- The bigest blind coding contest in Apex Institute of management and Science.
+- Achieve the good rank in biggest blind coding contest across over the 150+ participants and solved complex programming challenges under strict time constraints.
+- Demonstrated exceptional problem-solving and coding skills without seeing the code output.
 """;
 const String ksActivities = "Activities I've joined";
 final List<Activity> ksActivityList = [
@@ -137,23 +135,23 @@ final List<Activity> ksActivityList = [
     name: ksAwardName,
     icon: Icons.troubleshoot,
     details: ksAwardDetails,
-    link: ksAwardLink,
+    // link: ksAwardLink,
   ),
-  Activity(
-    title: ksActivities,
-    name:
-        "TFI SCALE Program (Temasek Foundation International Specialists' Community Action andLeadership Exchange Program - Singapore)",
-    icon: Icons.local_activity,
-    details:
-        "This is a five-week Exchange Program with Singapore Polytechnic ( 3-weeks in Singapore and 2-weeks in Myanmar Learnt data analytics, design thinking and co-operation skills and applied them on the Coffee Farm Project",
-  ),
-  Activity(
-    name:
-        "JST Japan-Asia Youth Program (Sakura Science Exchange Program - Japan)",
-    icon: Icons.local_activity,
-    details:
-        "This is a 9-days Exchange Program at Miyakonojo College, Miyazaki, Japan\nLearnt basic IOT and made the POINT Traffic Control System ( Traffic lights control system with extended functionalities such as alerts when driver recklessly drive while red light is on )",
-  ),
+  // Activity(
+  //   title: ksActivities,
+  //   name:
+  //       "TFI SCALE Program (Temasek Foundation International Specialists' Community Action andLeadership Exchange Program - Singapore)",
+  //   icon: Icons.local_activity,
+  //   details:
+  //       "This is a five-week Exchange Program with Singapore Polytechnic ( 3-weeks in Singapore and 2-weeks in Myanmar Learnt data analytics, design thinking and co-operation skills and applied them on the Coffee Farm Project",
+  // ),
+  // Activity(
+  //   name:
+  //       "JST Japan-Asia Youth Program (Sakura Science Exchange Program - Japan)",
+  //   icon: Icons.local_activity,
+  //   details:
+  //       "This is a 9-days Exchange Program at Miyakonojo College, Miyazaki, Japan\nLearnt basic IOT and made the POINT Traffic Control System ( Traffic lights control system with extended functionalities such as alerts when driver recklessly drive while red light is on )",
+  // ),
 ];
 
 final List<Experience> ksExperiences = [

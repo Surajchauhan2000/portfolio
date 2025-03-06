@@ -4,10 +4,7 @@ import 'package:portfolio/presentation/utils/extensions/layout_adapter_ex.dart';
 import 'package:portfolio/presentation/utils/extensions/widget_ex.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-import '../../../utils/configs/constant_color.dart';
 import '../../../utils/configs/constant_sizes.dart';
-import '../../../utils/configs/constants_strings.dart';
-import '../../../widgets/outlined_text.dart';
 import 'awards_and_activities.dart';
 import 'background_info.dart';
 import 'tools_and_technologies.dart';
@@ -106,26 +103,6 @@ class _BackgroundStoryState extends State<BackgroundStory>
         }
       },
       child: <Widget>[
-        RotatedBox(
-          quarterTurns: 3,
-          child: OutlinedText(
-            text: ksYoung,
-            fontSize: s24,
-            letterSpacing: 1.5,
-            strokeColor: kSecondary,
-            textColor: kTransparent,
-            strokeWidth: s1,
-            fontWeight: FontWeight.w700,
-          ),
-        )
-            .addPadding(
-              edgeInsets: context.allPadding(
-                p: s40,
-              ),
-            )
-            .addAlign(
-              alignment: Alignment.bottomRight,
-            ),
         <Widget>[
           BackgroundInfo(
             stickController: _stickController,

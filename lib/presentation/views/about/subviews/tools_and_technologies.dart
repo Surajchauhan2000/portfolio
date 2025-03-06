@@ -47,16 +47,16 @@ class ToolsAndTechnologies extends StatelessWidget {
           ),
           verticalSpaceSmall,
           <Widget>[
-            Text(
-              ksWeapon,
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    fontWeight: FontWeight.w300,
-                  ),
-            ),
-            horizontalSpaceMedium,
-            const FlutterLogo(
-              size: s24,
-            ),
+            // Text(
+            //   ksWeapon,
+            //   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+            //         fontWeight: FontWeight.w300,
+            //       ),
+            // ),
+            // horizontalSpaceMedium,
+            // const FlutterLogo(
+            //   size: s24,
+            // ),
             // Text(
             //   ksFlutter.toUpperCase(),
             //   style: Theme.of(context).textTheme.labelMedium?.copyWith(
