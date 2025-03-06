@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/presentation/utils/extensions/context_ex.dart';
 import 'package:portfolio/presentation/utils/extensions/layout_adapter_ex.dart';
 import 'package:portfolio/presentation/utils/extensions/widget_ex.dart';
 
 import '../../../utils/configs/constant_assets.dart';
-import '../../../utils/configs/constant_color.dart';
 import '../../../utils/configs/constant_sizes.dart';
-import '../../../utils/configs/constants_strings.dart';
-import '../../../widgets/outlined_text.dart';
-import '../widgets/left_stick_label.dart';
 import '../widgets/specialization_text.dart';
 
 class WhoAmI extends StatefulWidget {
@@ -107,28 +102,28 @@ class _WhoAmIState extends State<WhoAmI> with TickerProviderStateMixin {
 
   Widget mobileVersion() {
     return <Widget>[
+      // Positioned(
+      //   bottom: s0,
+      //   left: s0,
+      //   child: LeftStickLabel(
+      //     textController: _textController!,
+      //     stickController: _stickController!,
+      //   ),
+      // ),
+      // Positioned(
+      //   top: context.percentHeight(s10),
+      //   right: context.percentWidth(s8),
+      //   child: OutlinedText(
+      //     text: ksNobody,
+      //     strokeWidth: s1,
+      //     fontSize: s20,
+      //     strokeColor: kSecondary.withOpacity(0.3),
+      //     textColor: kTransparent,
+      //     fontWeight: FontWeight.w900,
+      //   ),
+      // ),
       Positioned(
-        bottom: s0,
-        left: s0,
-        child: LeftStickLabel(
-          textController: _textController!,
-          stickController: _stickController!,
-        ),
-      ),
-      Positioned(
-        top: context.percentHeight(s10),
-        right: context.percentWidth(s8),
-        child: OutlinedText(
-          text: ksNobody,
-          strokeWidth: s1,
-          fontSize: s20,
-          strokeColor: kSecondary.withOpacity(0.3),
-          textColor: kTransparent,
-          fontWeight: FontWeight.w900,
-        ),
-      ),
-      Positioned(
-        top: s0,
+        top: s100,
         left: s0,
         right: s0,
         child: Container(
@@ -137,48 +132,88 @@ class _WhoAmIState extends State<WhoAmI> with TickerProviderStateMixin {
           child: const SpecializationText(),
         ),
       ),
+      // Container(
+      //   height: 600,
+      //   width: 600,
+      //   color: Colors.red,
+      //   // child: Image(
+      //   //   image: myPicture.image,
+      //   //   width: 600,
+      //   //   height: 600,
+      //   // ),
+      // ),
+
       Positioned(
         bottom: s0,
         left: s0,
         right: s0,
         child: <Widget>[
-          Positioned(
-            bottom: s0,
-            left: s0,
-            right: s0,
-            child: AspectRatio(
-              aspectRatio: 12 / 9,
+          // Positioned(
+          //   bottom: s20,
+          //   left: s0,
+          //   right: s0,
+          //   child: AspectRatio(
+          //     aspectRatio: 12 / 9,
+          //     child: Image(
+          //       image: myPicture.image,
+          //       width: 200,
+          //     ),
+          //   ),
+          // ),
+          Center(
+            child: Container(
+              height: 700,
+              width: 370,
+              margin: const EdgeInsets.only(bottom: 20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(60),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.6), // Shadow color
+                    blurRadius: 15, // Spread of shadow
+                    offset: Offset(6, 6), // Shift shadow to bottom and right
+                  ),
+                  // BoxShadow(
+                  //   color: Colors.black.withOpacity(0.5), // Shadow color
+                  //   blurRadius: 7, // Spread of shadow
+                  //   offset: Offset(-5, -5), // Shift shadow to bottom and right
+                  // ),
+                ],
+              ),
+              clipBehavior:
+                  Clip.hardEdge, // Ensures the image follows the border radius
               child: Image(
                 image: myPicture.image,
+                fit: BoxFit.cover,
               ),
             ),
           ),
-          Positioned(
-            left: s50,
-            top: context.percentHeight(s10),
-            child: SlideTransition(
-              position: _earthSlideAnimation,
-              child: SvgPicture.asset(
-                kaEarth,
-                semanticsLabel: 'Earth SVG',
-                width: s50,
-                height: s50,
-              ),
-            ),
-          ),
-          Positioned(
-            right: s20,
-            top: context.percentHeight(s20),
-            child: SlideTransition(
-              position: _galaxySlideAnimation,
-              child: SvgPicture.asset(
-                kaGalaxy,
-                semanticsLabel: 'Galaxy SVG',
-                width: s50,
-                height: s50,
-              ),
-            ),
-          ),
+          // Positioned(
+          //   left: s50,
+          //   top: context.percentHeight(s10),
+          //   child: SlideTransition(
+          //     position: _earthSlideAnimation,
+          //     child: SvgPicture.asset(
+          //       kaEarth,
+          //       semanticsLabel: 'Earth SVG',
+          //       width: s50,
+          //       height: s50,
+          //     ),
+          //   ),
+          // ),
+          // Positioned(
+          //   right: s20,
+          //   top: context.percentHeight(s20),
+          //   child: SlideTransition(
+          //     position: _galaxySlideAnimation,
+          //     child: SvgPicture.asset(
+          //       kaGalaxy,
+          //       semanticsLabel: 'Galaxy SVG',
+          //       width: s50,
+          //       height: s50,
+          //     ),
+          //   ),
+          // ),
         ]
             .addStack()
             .addSizedBox(
@@ -204,25 +239,25 @@ class _WhoAmIState extends State<WhoAmI> with TickerProviderStateMixin {
 
   Widget desktopVersion() {
     return <Widget>[
-      Positioned(
-        bottom: s0,
-        left: s0,
-        child: LeftStickLabel(
-          textController: _textController!,
-          stickController: _stickController!,
-        ),
-      ),
-      Positioned(
-        top: context.percentHeight(s10),
-        right: context.percentWidth(s8),
-        child: OutlinedText(
-          text: ksNobody,
-          fontSize: s100,
-          strokeColor: kSecondary,
-          textColor: kTransparent,
-          fontWeight: FontWeight.w900,
-        ),
-      ),
+      // Positioned(
+      //   bottom: s0,
+      //   left: s0,
+      //   child: LeftStickLabel(
+      //     textController: _textController!,
+      //     stickController: _stickController!,
+      //   ),
+      // ),
+      // Positioned(
+      //   top: context.percentHeight(s10),
+      //   right: context.percentWidth(s8),
+      //   child: OutlinedText(
+      //     text: ksNobody,
+      //     fontSize: s100,
+      //     strokeColor: kSecondary,
+      //     textColor: kTransparent,
+      //     fontWeight: FontWeight.w900,
+      //   ),
+      // ),
       Container(
         margin: context.symmetricPercentPadding(hPercent: s8),
         padding: context.allPercentPadding(allPercent: s3),
@@ -232,39 +267,58 @@ class _WhoAmIState extends State<WhoAmI> with TickerProviderStateMixin {
         ].addRow(),
       ),
       <Widget>[
-        AspectRatio(
-          aspectRatio: 1,
+        Container(
+          height: 600,
+          width: 700,
+          margin: const EdgeInsets.only(bottom: 60),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(60),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.6), // Shadow color
+                blurRadius: 15, // Spread of shadow
+                offset: Offset(6, 6), // Shift shadow to bottom and right
+              ),
+              // BoxShadow(
+              //   color: Colors.black.withOpacity(0.5), // Shadow color
+              //   blurRadius: 7, // Spread of shadow
+              //   offset: Offset(-5, -5), // Shift shadow to bottom and right
+              // ),
+            ],
+          ),
+          clipBehavior:
+              Clip.hardEdge, // Ensures the image follows the border radius
           child: Image(
             image: myPicture.image,
-            height: context.percentHeight(s50),
+            fit: BoxFit.cover,
           ),
         ),
-        Positioned(
-          left: s0,
-          top: context.percentHeight(s32),
-          child: SlideTransition(
-            position: _earthSlideAnimation,
-            child: SvgPicture.asset(
-              kaEarth,
-              semanticsLabel: 'Earth SVG',
-              width: s80,
-              height: s80,
-            ),
-          ),
-        ),
-        Positioned(
-          right: s0,
-          top: context.percentHeight(s48),
-          child: SlideTransition(
-            position: _galaxySlideAnimation,
-            child: SvgPicture.asset(
-              kaGalaxy,
-              semanticsLabel: 'Galaxy SVG',
-              width: s80,
-              height: s80,
-            ),
-          ),
-        ),
+        // Positioned(
+        //   left: s0,
+        //   top: context.percentHeight(s32),
+        //   child: SlideTransition(
+        //     position: _earthSlideAnimation,
+        //     child: SvgPicture.asset(
+        //       kaEarth,
+        //       semanticsLabel: 'Earth SVG',
+        //       width: s80,
+        //       height: s80,
+        //     ),
+        //   ),
+        // ),
+        // Positioned(
+        //   right: s0,
+        //   top: context.percentHeight(s48),
+        //   child: SlideTransition(
+        //     position: _galaxySlideAnimation,
+        //     child: SvgPicture.asset(
+        //       kaGalaxy,
+        //       semanticsLabel: 'Galaxy SVG',
+        //       width: s80,
+        //       height: s80,
+        //     ),
+        //   ),
+        // ),
       ]
           .addStack(
             alignment: Alignment.bottomCenter,

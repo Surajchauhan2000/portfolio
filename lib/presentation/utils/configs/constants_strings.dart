@@ -69,13 +69,14 @@ const String ksCC = "©️ 2023 Ye Lwin Oo";
 const String ksYoung = "When I was young, I was a kid!";
 const String ksNobody = "I'm NOBODY";
 const String ksSpecialization =
-    "I specialize in Mobile Technologies and highly passionate about developing quality applications, open-source works and AI.";
+    "I specialize in Website and Mobile Technologies and highly passionate about developing quality of applications.";
 const String ksWhoAmI = 'Who Am I?';
 const String ksWhatILove = "What I Love To Do";
 const String ksBriefAboutMe =
-    "Hi! I'm a Front-end Software Engineer who is passionate about emerging Technologies and AI. I have fairly extensive amount of experience in developing high quality applications. I often work on freelance projects.";
+    "Hi! I'm a Full-stack Software Engineer who is passionate about emerging Technologies and AI. I have fairly extensive amount of experience in developing high quality applications.";
 const String ksMyLife =
-    "I was a third year student from the University of Computer Studies, Mandalay, Myanmar. But I dropped out in 2020 because of Military Coup & COVID-19.";
+    "I am Post graduate student from the NIT kurukshetra of Computer Applications, Kurukshetra, Haryana.  I dropped out in 2020 because of Military Coup & COVID-19.";
+
 const String ksProfession =
     "I started working as a Flutter Developer since 2019. Later, I fell in love with it. I'm eager to contribute in Flutter community. Recently, I've published my first state management package: Pulse-X and animated button library: Pretty Animated Buttons.";
 

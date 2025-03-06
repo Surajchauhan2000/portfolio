@@ -20,9 +20,11 @@ class AwardsAndActivities extends StatelessWidget {
     required this.textController,
     required this.infoController,
   });
+
   final AnimationController stickController;
   final AnimationController textController;
   final AnimationController infoController;
+
   @override
   Widget build(BuildContext context) {
     return <Widget>[
@@ -67,7 +69,9 @@ class ActivityContainer extends StatelessWidget {
     super.key,
     required this.activity,
   });
+
   final Activity activity;
+
   @override
   Widget build(BuildContext context) {
     return <Widget>[
