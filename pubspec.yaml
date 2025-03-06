@@ -99,6 +99,7 @@ flutter:
     - assets/images/projects/naiara/naiaraImg7.png
     - assets/images/projects/naiara/naiaraImg8.png
     - assets/images/projects/naiara/naiaraIcon.png
+    - assets/images/personal/surajPics.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

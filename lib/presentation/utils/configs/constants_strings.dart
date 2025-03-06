@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../data/model/activity.dart';
 import '../../../data/model/experience.dart';
 import '../../../data/model/project_info.dart';
 import '../../../data/model/quote.dart';
@@ -31,9 +32,6 @@ const String ksIntro = """
   """;
 const String ksSeeMyWork = "See my work";
 const String ksBrowseProjects = "Browse My Projects";
-const String ksWhatElse =
-    "What else? I have freelanced on several side projects.";
-const String ksSayHello = "Just say Hello to collaborate!";
 const String ksHome = "Home";
 const String ksAbout = "About";
 const String ksExperience = "My Experience";
@@ -71,15 +69,16 @@ const String ksCC = "©️ 2023 Ye Lwin Oo";
 const String ksYoung = "When I was young, I was a kid!";
 const String ksNobody = "I'm NOBODY";
 const String ksSpecialization =
-    "I specialize in Mobile Technologies and highly passionate about developing quality applications, open-source works and AI.";
+    "I specialize in Website and Mobile Technologies and highly passionate about developing quality of applications.";
 const String ksWhoAmI = 'Who Am I?';
 const String ksWhatILove = "What I Love To Do";
 const String ksBriefAboutMe =
-    "Hi! I'm a Front-end Software Engineer who is passionate about emerging Technologies and AI. I have fairly extensive amount of experience in developing high quality applications. I often work on freelance projects.";
+    "Hi! this is Suraj chauhan, I'm a Full-stack Software Engineer who is passionate about emerging Technologies and AI. Well-qualified Developer familiar with wide range of programming utilities and languages.  I have fairly extensive 1+ year of experience in developing and building high quality dynamic and scalable web and mobile applications.";
 const String ksMyLife =
-    "I was a third year student from the University of Computer Studies, Mandalay, Myanmar. But I dropped out in 2020 because of Military Coup & COVID-19.";
+    "I completed my post-graduation in Computer Applications from NIT Kurukshetra, Haryana, in 2024.";
+
 const String ksProfession =
-    "I started working as a Flutter Developer since 2019. Later, I fell in love with it. I'm eager to contribute in Flutter community. Recently, I've published my first state management package: Pulse-X and animated button library: Pretty Animated Buttons.";
+    "I started working as a Full-stack Developer since 2024. I'm eager to contribute in different projects. Recently, I've worked on two project Faircado (Second hand alternative) and NAIARA - APP (AI powered chatBot) where i worked as a front -end and back-end developer. I am passionate about website and mobile application development.";
 
 const String ksMyTools =
     "I use a bunch of tools and technologies to make design and implementation process easier. ";
@@ -92,18 +91,14 @@ final List<String> ksMobileTech = ['Flutter', 'Dart'];
 final List<String> ksWebTech = [
   'HTML',
   'CSS',
-  'Three Js',
-  'C',
+  'JavaScript',
+  'Express.js',
+  'React',
+  'Node.js',
   'Java',
+  'GoLand'
 ];
-final List<String> ksOtherTech = [
-  'Firebase',
-  'GraphQL',
-  'Appwrite',
-  'MongoDB',
-  'SQL',
-  'Python',
-];
+final List<String> ksOtherTech = ['Firebase', 'MongoDB', 'SQL', 'Radix'];
 
 const String ksCoding = "Software Engineering";
 const String ksCodingMobile = "Software\nEngineering";
@@ -125,38 +120,40 @@ final List<RouteModel> ksMenu = [
 
 const String ksAwardsAndActivities = "Awards & Activities";
 const String ksAward = "Award I've won";
-const String ksAwardName = "Design Award by WIT (Web Innovative Talent Award)";
+const String ksAwardName =
+    "Blind coding context (Apex  institute of management and Science)";
 const String ksAwardLink = "https://witaward.com/result/2020";
 const String ksAwardDetails = """
-- The biggest web development contest in Myanmar ( collaboration with Japan )
-- This project aims for foreigners and Myanmar citizens who are enthusiastic about Myanmar culture, cuisine, handicrafts and who want to pay a visit to famous places in Myanmar and who want to enhance their knowledge about various ethnic groups in Myanmar.
+- The bigest blind coding contest in Apex Institute of management and Science.
+- Achieve the good rank in biggest blind coding contest across over the 150+ participants and solved complex programming challenges under strict time constraints.
+- Demonstrated exceptional problem-solving and coding skills without seeing the code output.
 """;
 const String ksActivities = "Activities I've joined";
-// final List<Activity> ksActivityList = [
-//   Activity(
-//     title: ksAward,
-//     name: ksAwardName,
-//     icon: kiTrophy,
-//     details: ksAwardDetails,
-//     link: ksAwardLink,
-//   ),
-//   Activity(
-//     title: ksActivities,
-//     name:
-//         "TFI SCALE Program (Temasek Foundation International Specialists' Community Action andLeadership Exchange Program - Singapore)",
-//     icon: kiActivity,
-//     details:
-//         "This is a five-week Exchange Program with Singapore Polytechnic ( 3-weeks in Singapore and 2-weeks in Myanmar Learnt data analytics, design thinking and co-operation skills and applied them on the Coffee Farm Project",
-//   ),
-//   Activity(
-//     name:
-//         "JST Japan-Asia Youth Program (Sakura Science Exchange Program - Japan)",
-//     icon: kiActivity,
-//     details:
-//         "This is a 9-days Exchange Program at Miyakonojo College, Miyazaki, Japan\nLearnt basic IOT and made the POINT Traffic Control System ( Traffic lights control system with extended functionalities such as alerts when driver recklessly drive while red light is on )",
-//   ),
-// ];
-//
+final List<Activity> ksActivityList = [
+  Activity(
+    title: ksAward,
+    name: ksAwardName,
+    icon: Icons.troubleshoot,
+    details: ksAwardDetails,
+    // link: ksAwardLink,
+  ),
+  // Activity(
+  //   title: ksActivities,
+  //   name:
+  //       "TFI SCALE Program (Temasek Foundation International Specialists' Community Action andLeadership Exchange Program - Singapore)",
+  //   icon: Icons.local_activity,
+  //   details:
+  //       "This is a five-week Exchange Program with Singapore Polytechnic ( 3-weeks in Singapore and 2-weeks in Myanmar Learnt data analytics, design thinking and co-operation skills and applied them on the Coffee Farm Project",
+  // ),
+  // Activity(
+  //   name:
+  //       "JST Japan-Asia Youth Program (Sakura Science Exchange Program - Japan)",
+  //   icon: Icons.local_activity,
+  //   details:
+  //       "This is a 9-days Exchange Program at Miyakonojo College, Miyazaki, Japan\nLearnt basic IOT and made the POINT Traffic Control System ( Traffic lights control system with extended functionalities such as alerts when driver recklessly drive while red light is on )",
+  // ),
+];
+
 final List<Experience> ksExperiences = [
   Experience(
     company: "Faircado (Second hand alternative)",
@@ -229,71 +226,12 @@ final List<Experience> ksExperiences = [
     startDate: DateTime(2024, 2),
     endDate: DateTime(2024, 6),
   ),
-  // Experience(
-  //   company: "App.com.mm",
-  //   position: "Mid-Senior Flutter Developer",
-  //   responsibilities: [
-  //     "Lead and trained a team of 3 Flutter developers in developing mobile applications",
-  //     "Contributed features in Blogging app & E-commerce app",
-  //     "Worked on the delivery service mobile app",
-  //   ],
-  //   startDate: DateTime(2022, 5),
-  //   endDate: DateTime(2022, 9),
-  // ),
-  // Experience(
-  //   company: "7r48",
-  //   position: "Junior Flutter Developer",
-  //   responsibilities: [
-  //     "Started learning Flutter, GetX, Provider, Bloc and implementing small projects using Flutter",
-  //     "Worked closely with senior mobile developer and backend developer to develop Kaung Myat Denti Dental Clinic System mobile app",
-  //     "Worked on car service management system mobile app",
-  //     "Architected and implemented small projects such as TOTO lottery prediction app using AI backend using python",
-  //     "Implemented small python AI projects - Activity Recognition, Driver Drowsiness Detection, Football match prediction, JSON to excel file converter"
-  //   ],
-  //   type: JobType.remote,
-  //   startDate: DateTime(2019, 10),
-  //   endDate: DateTime(2022, 12),
-  // ),
 ];
-//
-// final List<Certificate> ksCertificateList = [
-//   Certificate(
-//     name: "GraphQL Associate Certificate",
-//     image: kaGraphQLCerti,
-//     link: "",
-//   ),
-//   Certificate(
-//     name: "Deep Learning Specialization (Coursera)",
-//     image: kaDeepLearningCerti,
-//     link: "",
-//   ),
-//   Certificate(
-//     name: "Intermediate Python (DataCamp)",
-//     image: kaPythonCerti,
-//     link: "",
-//   ),
-//   Certificate(
-//     name: "JST Japan-Asia Youth Exchange Program",
-//     image: kaJSTCerti,
-//     link: "",
-//   ),
-//   Certificate(
-//     name: "TF SCALE Leadership Exchange Program",
-//     image: kaTMESEKCerti,
-//     link: "",
-//   ),
-// ];
 
-const String _nikolaTesla = "Nikola Tesla";
-const String _kentBeck = "Kent Beck";
 const String _linusTorvalds = "Linus Torvalds";
 const String _donaldKnuth = "Donald Knuth";
 const String _albertEinstein = "Albert Einstein";
-const String _alanTuring = "Alan Turing";
-const String _johnLennon = "John Lennon";
 const String _steveJobs = "Steve Jobs";
-const String _kurtCobain = "Kurt Cobain";
-const String _jamesClear = "James Clear";
 final List<Quote> ksQuotes = [
   Quote(
     name: "I'm generally a very pragmatic person: that which works, works.",
