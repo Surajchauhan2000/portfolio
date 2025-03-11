@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:layout/layout.dart';
@@ -7,9 +8,16 @@ import 'package:portfolio/presentation/utils/extensions/theme_ex.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "your-api-key",
+      appId: "your-app-id",
+      messagingSenderId: "your-messaging-sender-id",
+      projectId: "your-project-id",
+      storageBucket: "your-storage-bucket",
+      authDomain: "your-auth-domain",
+    ),
+  );
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);

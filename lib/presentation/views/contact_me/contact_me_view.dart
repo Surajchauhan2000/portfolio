@@ -6,11 +6,16 @@ import 'package:portfolio/presentation/utils/extensions/context_ex.dart';
 import 'package:portfolio/presentation/utils/extensions/layout_adapter_ex.dart';
 import 'package:portfolio/presentation/utils/extensions/string_ex.dart';
 import 'package:portfolio/presentation/utils/extensions/widget_ex.dart';
+import 'package:pretty_animated_buttons/widgets/pretty_capsule_button.dart';
 
+import '../../../domain/contact_viewmodel.dart';
+import '../../../injection.dart';
 import '../../utils/configs/constant_assets.dart';
 import '../../utils/configs/constant_color.dart';
+import '../../utils/configs/constant_icons.dart';
 import '../../utils/configs/constant_sizes.dart';
 import '../../utils/configs/constants_strings.dart';
+import '../../widgets/animated_text_field.dart';
 import '../wrapper.dart';
 
 class ContactMeView extends StatelessWidget {
@@ -253,7 +258,7 @@ class _GetInTouchPageState extends State<GetInTouchPage>
         PrettyCapsuleButton(
           label: ksSendMessage,
           onPressed: sendMessage,
-          icon: kiMemo,
+          icon: Icons.add,
           padding: context.symmetricPadding(
             h: s50,
             v: s18,
@@ -330,8 +335,6 @@ class _GetInTouchPageState extends State<GetInTouchPage>
     );
   }
 }
-
-class AnimatedTextField {}
 
 class ContactLabel extends StatelessWidget {
   const ContactLabel({super.key, required this.label});
