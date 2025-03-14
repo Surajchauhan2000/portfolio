@@ -6,6 +6,8 @@ import 'package:portfolio/presentation/route/routes.dart';
 import 'package:portfolio/presentation/utils/custom_scroll_behaviour.dart';
 import 'package:portfolio/presentation/utils/extensions/theme_ex.dart';
 
+import 'injection.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -21,7 +23,7 @@ void main() async {
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
-  // Injection.setUp();
+  Injection.setUp();
   // setPathUrlStrategy();
   runApp(const TucoYe());
 }

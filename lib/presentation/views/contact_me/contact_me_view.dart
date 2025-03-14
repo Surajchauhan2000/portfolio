@@ -38,8 +38,8 @@ class GetInTouchPage extends StatefulWidget {
 
 class _GetInTouchPageState extends State<GetInTouchPage>
     with TickerProviderStateMixin {
+  // final _contactVM = locator.get<ContactViewModel>();
   final _contactVM = locator.get<ContactViewModel>();
-
   bool hasError = false;
   final _nameController = TextEditingController();
   final _jobController = TextEditingController();

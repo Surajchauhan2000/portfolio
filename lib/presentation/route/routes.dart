@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/presentation/views/projects/projects_view.dart';
 
 import '../views/about/about_view.dart';
+import '../views/contact_me/contact_me_view.dart';
 import '../views/experience/experience_view.dart';
 import '../views/home/home_page.dart';
 import 'route_transitions.dart';
@@ -30,7 +31,7 @@ class RouteGen {
       case Routes.about:
         return _buildRoute(const AboutView(), settings: settings);
       case Routes.contact:
-      // return _buildRoute(const ContactMeView(), settings: settings);
+        return _buildRoute(const ContactMeView(), settings: settings);
       default:
         return _buildRoute(const ErrorView(), settings: settings);
     }
