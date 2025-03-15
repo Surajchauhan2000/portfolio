@@ -4,12 +4,14 @@ class Contact {
   final String email;
   final String job;
   final String message;
+  final String phone;
   Contact({
     required this.date,
     required this.name,
     required this.email,
     required this.job,
     this.message = '',
+    this.phone = '',
   });
 
   factory Contact.fromJson(Map<String, dynamic> json) => Contact(
@@ -18,6 +20,7 @@ class Contact {
         job: json['job'],
         email: json['email'],
         message: json['message'],
+        phone: json['phone'],
       );
 
   Map<String, dynamic> toJson() => {
@@ -26,5 +29,6 @@ class Contact {
         "job": job,
         "email": email,
         "message": message,
+        "phone": phone
       };
 }

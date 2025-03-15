@@ -11,7 +11,7 @@ import 'injection.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: FirebaseOptions(
+    options: const FirebaseOptions(
       apiKey: "your-api-key",
       appId: "your-app-id",
       messagingSenderId: "your-messaging-sender-id",

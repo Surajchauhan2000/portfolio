@@ -11,6 +11,7 @@ class ContactViewModel {
   String email = '';
   String message = '';
   String error = '';
+  String phone = '';
   final dateFormat = DateFormat.yMMMMEEEEd();
 
   bool sendMessage() {
@@ -33,7 +34,9 @@ class ContactViewModel {
         email: email,
         job: job,
         message: message,
+        phone: phone,
       );
   bool get validateFormFields =>
-      name.isNotEmpty && email.isNotEmpty && job.isNotEmpty;
+      // name.isNotEmpty && email.isNotEmpty && job.isNotEmpty;
+      name.isNotEmpty && email.isNotEmpty && phone.isNotEmpty;
 }

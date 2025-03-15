@@ -44,17 +44,20 @@ class _GetInTouchPageState extends State<GetInTouchPage>
   final _nameController = TextEditingController();
   final _jobController = TextEditingController();
   final _emailController = TextEditingController();
+  final _phoneController = TextEditingController();
   final _messageController = TextEditingController();
 
   late AnimationController _nameAnimationController;
   late AnimationController _jobAnimationController;
   late AnimationController _emailAnimationController;
+  late AnimationController _phoneAnimationController;
   late AnimationController _messageAnimationController;
   late AnimationController _snackbarAnimationController;
 
   final _nameNode = FocusNode();
   final _jobNode = FocusNode();
   final _emailNode = FocusNode();
+  final _phoneNode = FocusNode();
   final _messageNode = FocusNode();
   @override
   void initState() {
@@ -65,6 +68,8 @@ class _GetInTouchPageState extends State<GetInTouchPage>
         AnimationController(vsync: this, duration: duration500);
     _emailAnimationController =
         AnimationController(vsync: this, duration: duration500);
+    _phoneAnimationController =
+        AnimationController(vsync: this, duration: duration500);
     _messageAnimationController =
         AnimationController(vsync: this, duration: duration500);
     _snackbarAnimationController =
@@ -73,6 +78,7 @@ class _GetInTouchPageState extends State<GetInTouchPage>
     _nameNode.addListener(nameListener);
     _jobNode.addListener(jobListener);
     _emailNode.addListener(emailListener);
+    _phoneNode.addListener(phoneListener);
     _messageNode.addListener(messageListener);
   }
 
@@ -109,6 +115,16 @@ class _GetInTouchPageState extends State<GetInTouchPage>
     } else {
       if (_emailAnimationController.isCompleted) {
         _emailAnimationController.reverse();
+      }
+    }
+  }
+
+  void phoneListener() {
+    if (_phoneNode.hasFocus) {
+      _phoneAnimationController.forward();
+    } else {
+      if (_phoneAnimationController.isCompleted) {
+        _phoneAnimationController.reverse();
       }
     }
   }
@@ -154,6 +170,7 @@ class _GetInTouchPageState extends State<GetInTouchPage>
     _contactVM.job = _jobController.text;
     _contactVM.email = _emailController.text;
     _contactVM.message = _messageController.text;
+    _contactVM.phone = _phoneController.text;
     bool hasSent = _contactVM.sendMessage();
     if (hasSent) clearData();
     _snackbarAnimationController.forward();
@@ -195,65 +212,78 @@ class _GetInTouchPageState extends State<GetInTouchPage>
         ),
         verticalSpaceMedium,
         Text(
-          'Schedule an Appointment',
+          'Contact',
           style: context.adaptive(Theme.of(context).textTheme.bodyLarge,
               Theme.of(context).textTheme.titleLarge),
         ),
         context.percentSizedBox(pHeight: s12),
         <Widget>[
-          const ContactLabel(
-            label: 'Hey, my name is',
-          ),
+          // const ContactLabel(
+          //   label: 'Hey, my name is',
+          // ),
           AnimatedTextField(
             animation: _nameAnimationController,
             node: _nameNode,
             textController: _nameController,
-            hintText: 'Your Name',
+            hintText: 'Enter Your Name',
             width: context.percentWidth(context.adaptive(s40, s20)),
           ),
-          const ContactLabel(
-            label: "and I'm looking for",
-          ),
-          AnimatedTextField(
-            animation: _jobAnimationController,
-            node: _jobNode,
-            width: context.percentWidth(context.adaptive(s40, s30)),
-            textController: _jobController,
-            hintText: 'Your Job Type',
-          ),
-          const ContactLabel(label: "."),
-          const ContactLabel(
-            label: 'Get in touch with me at',
-          ),
+          // const ContactLabel(
+          //   label: "and I'm looking for",
+          // ),
+          // AnimatedTextField(
+          //   animation: _jobAnimationController,
+          //   node: _jobNode,
+          //   width: context.percentWidth(context.adaptive(s40, s30)),
+          //   textController: _jobController,
+          //   hintText: 'Your Job Type',
+          // ),
+          // const ContactLabel(label: "."),
+          // const ContactLabel(
+          //   label: 'Get in touch with me at',
+          // ),
+          context.percentSizedBox(pHeight: s8),
           AnimatedTextField(
             animation: _emailAnimationController,
             node: _emailNode,
-            hintText: 'Type Your Email Here',
+            hintText: 'Enter your Email Here',
             textController: _emailController,
             isEmail: true,
-            width: context.percentWidth(s40),
+            width: context.percentWidth(s30),
           ),
-          const ContactLabel(label: "!"),
-          const ContactLabel(
-            label: "I have some special request & more info to tell you about",
-          ),
+          context.percentSizedBox(pHeight: s8),
           AnimatedTextField(
-            isMultiline: true,
-            animation: _messageAnimationController,
-            node: _messageNode,
-            hintText: 'Tell Me More',
-            textController: _messageController,
-            width: context.percentWidth(context.adaptive(s70, s50)),
+            animation: _phoneAnimationController,
+            node: _phoneNode,
+            hintText: 'Enter Phone number here',
+            textController: _phoneController,
+            width: context.percentWidth(s30),
           ),
-          const ContactLabel(label: "."),
-        ].addWrap(
-          spacing: context.percentWidth(
-            s1,
-          ),
-          vSpacing: context.percentHeight(
-            context.adaptive(s1, s6),
-          ),
+          // const ContactLabel(label: "!"),
+          // const ContactLabel(
+          //   label: "I have some special request & more info to tell you about",
+          // ),
+          // AnimatedTextField(
+          //   isMultiline: true,
+          //   animation: _messageAnimationController,
+          //   node: _messageNode,
+          //   hintText: 'Tell Me More',
+          //   textController: _messageController,
+          //   width: context.percentWidth(context.adaptive(s70, s50)),
+          // ),
+          // const ContactLabel(label: "."),
+        ].addColumn(
+          // Replace addWrap() with addColumn()
+          crossAxisAlignment: CrossAxisAlignment.start,
         ),
+        //     .addWrap(
+        //   spacing: context.percentWidth(
+        //     s1,
+        //   ),
+        //   vSpacing: context.percentHeight(
+        //     context.adaptive(s1, s6),
+        //   ),
+        // ),
         context.percentSizedBox(pHeight: context.adaptive(s8, s4)),
         PrettyCapsuleButton(
           label: ksSendMessage,
