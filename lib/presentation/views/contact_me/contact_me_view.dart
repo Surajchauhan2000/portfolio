@@ -218,9 +218,6 @@ class _GetInTouchPageState extends State<GetInTouchPage>
         ),
         context.percentSizedBox(pHeight: s12),
         <Widget>[
-          // const ContactLabel(
-          //   label: 'Hey, my name is',
-          // ),
           AnimatedTextField(
             animation: _nameAnimationController,
             node: _nameNode,
@@ -228,20 +225,6 @@ class _GetInTouchPageState extends State<GetInTouchPage>
             hintText: 'Enter Your Name',
             width: context.percentWidth(context.adaptive(s40, s20)),
           ),
-          // const ContactLabel(
-          //   label: "and I'm looking for",
-          // ),
-          // AnimatedTextField(
-          //   animation: _jobAnimationController,
-          //   node: _jobNode,
-          //   width: context.percentWidth(context.adaptive(s40, s30)),
-          //   textController: _jobController,
-          //   hintText: 'Your Job Type',
-          // ),
-          // const ContactLabel(label: "."),
-          // const ContactLabel(
-          //   label: 'Get in touch with me at',
-          // ),
           context.percentSizedBox(pHeight: s8),
           AnimatedTextField(
             animation: _emailAnimationController,
@@ -259,31 +242,10 @@ class _GetInTouchPageState extends State<GetInTouchPage>
             textController: _phoneController,
             width: context.percentWidth(s30),
           ),
-          // const ContactLabel(label: "!"),
-          // const ContactLabel(
-          //   label: "I have some special request & more info to tell you about",
-          // ),
-          // AnimatedTextField(
-          //   isMultiline: true,
-          //   animation: _messageAnimationController,
-          //   node: _messageNode,
-          //   hintText: 'Tell Me More',
-          //   textController: _messageController,
-          //   width: context.percentWidth(context.adaptive(s70, s50)),
-          // ),
-          // const ContactLabel(label: "."),
         ].addColumn(
           // Replace addWrap() with addColumn()
           crossAxisAlignment: CrossAxisAlignment.start,
         ),
-        //     .addWrap(
-        //   spacing: context.percentWidth(
-        //     s1,
-        //   ),
-        //   vSpacing: context.percentHeight(
-        //     context.adaptive(s1, s6),
-        //   ),
-        // ),
         context.percentSizedBox(pHeight: context.adaptive(s8, s4)),
         PrettyCapsuleButton(
           label: ksSendMessage,
