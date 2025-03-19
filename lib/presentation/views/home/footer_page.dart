@@ -6,7 +6,6 @@ import 'package:portfolio/presentation/utils/configs/constant_sizes.dart';
 import 'package:portfolio/presentation/utils/extensions/context_ex.dart';
 import 'package:portfolio/presentation/utils/extensions/layout_adapter_ex.dart';
 import 'package:portfolio/presentation/utils/extensions/string_ex.dart';
-import 'package:portfolio/presentation/utils/extensions/theme_ex.dart';
 import 'package:portfolio/presentation/utils/extensions/widget_ex.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -174,6 +173,7 @@ class _FooterPageState extends State<FooterPage> with TickerProviderStateMixin {
 
   Widget _quoteSection() {
     return <Widget>[
+      // different quote displayed here
       AnimatedTextSlideBoxTransition(
         controller: _labelController,
         coverColor: _footerForegroundColor,
@@ -182,28 +182,6 @@ class _FooterPageState extends State<FooterPage> with TickerProviderStateMixin {
         maxLines: maxLines,
         textAlign: TextAlign.center,
         textStyle: quoteTextStyle,
-      ),
-      verticalSpaceLarge,
-      <Widget>[
-        const Spacer(),
-        AnimatedTextSlideBoxTransition(
-          controller: _labelController,
-          coverColor: _footerForegroundColor,
-          width: quoteSize.width + s50,
-          text: "— ${randomQuote.author}",
-          textStyle: context
-              .adaptive<TextStyle?>(
-                Theme.of(context).textTheme.bodySmall,
-                Theme.of(context).textTheme.bodyLarge,
-                md: Theme.of(context).textTheme.bodyMedium,
-              )
-              ?.copyWith(
-                fontWeight: FontWeight.w400,
-              ),
-        ),
-        horizontalSpaceEnormous,
-      ].addRow(
-        mainAxisAlignment: MainAxisAlignment.end,
       ),
     ]
         .addColumn(
@@ -235,22 +213,6 @@ class _FooterPageState extends State<FooterPage> with TickerProviderStateMixin {
         boxColor: kSecondary,
         coverColor: kBlack,
       ),
-      verticalSpaceMassive,
-      AnimatedTextSlideBoxTransition(
-        controller: _footerTextController,
-        text: ksFreelanceAvailability,
-        textStyle: context
-            .adaptive<TextStyle?>(
-              Theme.of(context).textTheme.bodyMedium,
-              Theme.of(context).textTheme.titleSmall,
-              md: Theme.of(context).textTheme.bodyLarge,
-            )
-            ?.copyWith(
-              color: _footerForegroundColor,
-            ),
-        boxColor: kSecondary,
-        coverColor: kBlack,
-      ),
     ].addColumn(
       mainAxisSize: MainAxisSize.min,
     );
@@ -273,7 +235,6 @@ class _FooterPageState extends State<FooterPage> with TickerProviderStateMixin {
 
   Widget _footerSocialAndCreditPart() {
     return <Widget>[
-      context.adaptive(noSpace, const Spacer()),
       Text(
         ksContactInfo,
         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
@@ -310,110 +271,9 @@ class _FooterPageState extends State<FooterPage> with TickerProviderStateMixin {
               ),
         ),
       ].addRow(mainAxisSize: MainAxisSize.min),
-      verticalSpaceMedium,
-      <Widget>[
-        ...ksSocialMedia.map((media) {
-          return IconButton(
-            // onPressed: media.link.launchWebsite,
-            // icon: media.icon,
-            onPressed: () {},
-            icon: Container(),
-          );
-        }).toList()
-      ].addRow(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        mainAxisSize: MainAxisSize.min,
-      ),
-      context.adaptive(noSpace, const Spacer()),
-      Text(
-        ksCreditTo,
-        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: _footerForegroundColor,
-            ),
-      ),
-      <Widget>[
-        <Widget>[
-          horizontalSpaceMassive,
-          Icon(
-            Icons.star,
-            // Atlas.star_trophy_achievement,
-            color: _footerForegroundColor,
-            size: s14,
-          ),
-          horizontalSpaceMedium,
-          Text(
-            ksDavidCobbina,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: _footerForegroundColor,
-                  decorationStyle: TextDecorationStyle.dotted,
-                  decoration: TextDecoration.underline,
-                  decorationColor: _footerForegroundColor,
-                  decorationThickness: s4,
-                ),
-          ),
-        ]
-            .addRow(mainAxisSize: MainAxisSize.min)
-            .addInkWell(onTap: ksDavidCobbinaWebsite.launchWebsite),
-        <Widget>[
-          horizontalSpaceMassive,
-          Icon(
-            Icons.credit_card,
-            color: _footerForegroundColor,
-            size: s14,
-          ),
-          horizontalSpaceMedium,
-          Text(
-            ksJuliusG,
-            style: context.bodyMedium.copyWith(
-              color: _footerForegroundColor,
-              decorationStyle: TextDecorationStyle.dotted,
-              decoration: TextDecoration.underline,
-              decorationColor: _footerForegroundColor,
-              decorationThickness: s4,
-            ),
-          ),
-        ]
-            .addRow(mainAxisSize: MainAxisSize.min)
-            .addInkWell(onTap: ksJuliusGWebsite.launchWebsite),
-      ].addColumn(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min),
     ].addColumn(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
-    );
-  }
-
-  Widget _madeWithFlutterLabel() {
-    return <Widget>[
-      Text(
-        ksBuildUsing,
-        style: context.bodyMedium.copyWith(
-          color: _footerForegroundColor,
-        ),
-      ),
-      const FlutterLogo(size: 14),
-      Text(
-        ksWithMuch,
-        style: context.bodyMedium.copyWith(
-          color: _footerForegroundColor,
-        ),
-      ),
-      const Icon(
-        Icons.heart_broken_outlined,
-        color: kRed,
-      ),
-    ].addRow(
-      mainAxisSize: MainAxisSize.min,
-    );
-  }
-
-  Widget _ccLabel() {
-    return Text(
-      ksCC,
-      style: context.bodyMedium.copyWith(
-        color: _footerForegroundColor,
-      ),
     );
   }
 
@@ -433,7 +293,7 @@ class _FooterPageState extends State<FooterPage> with TickerProviderStateMixin {
           <Widget>[
             context.adaptive<Widget>(
               <Widget>[
-                verticalSpaceMedium,
+                // verticalSpaceMedium,
                 _footerWelcomePart(),
                 verticalSpaceMedium,
                 _footerSocialAndCreditPart(),
@@ -455,10 +315,6 @@ class _FooterPageState extends State<FooterPage> with TickerProviderStateMixin {
                 _footerSocialAndCreditPart(),
               ].addRow().addExpanded(),
             ),
-            _madeWithFlutterLabel(),
-            verticalSpaceMedium,
-            _ccLabel(),
-            verticalSpaceLarge,
           ].addColumn().addContainer(
                 height: footerHeight,
                 width: context.screenWidth,

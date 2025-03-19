@@ -12,15 +12,15 @@ const String kaEarth = "$basePath$mePath/earth.svg";
 const String kaGalaxy = "$basePath$mePath/galaxy.svg";
 const String kaComplexity = "$basePath$mePath/complexity.svg";
 const String kaWorkStump = "$basePath$mePath/work_stump.svg";
-const String kaShowcaseStyle = "$basePath$mePath/my_showcase_style.png";
-const String kaCoffee = "$basePath$mePath/coffee.svg";
+const String kaShowcaseStyle = "$basePath$mePath/surajPics.jpeg";
+const String kaCoffee = "$basePath$mePath/surajPics.jpeg";
 
 /// project images
 const String projectPath = "/projects";
 // const String kaPulseX = "$basePath$projectPath/pulse_x.png";
 const String kaPulseX = "$basePath$projectPath/faircado/pulse_x.png";
 const String kaThread = "$basePath$projectPath/openBot/Openbot.webp";
-const String kaNotee = "$basePath$projectPath/naiara/naiaraApp.png";
+const String kaNotee = "$basePath$projectPath/naiara/naiaraIcon.png";
 const String kaTheGoldenLand = "$basePath$projectPath/the_golden_land.png";
 const String kaAnimatedButtons = "$basePath$projectPath/animated_buttons.png";
 const String kaAIChatBot = "$basePath$projectPath/ai_chat_bot.png";
