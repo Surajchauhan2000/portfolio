@@ -16,7 +16,7 @@ class RouteGen {
         // return _buildRoute(const HomePage(), settings: settings);
         return _buildRoute(
             ProjectDetailsView(
-              project: ksShowcaseProjects[0],
+              project: ksShowcaseProjects[2],
             ),
             settings: settings);
       case Routes.projects:

@@ -500,7 +500,7 @@ OpenBot is an open-source project that transforms a smartphone into an autonomou
     tech: ProjectInfo(
       icon: Icons.laptop_chromebook,
       label: 'Tools & Technologies',
-      contents: [_REACT.toUpperCase()],
+      contents: [_REACT.toUpperCase(), _FLUTTER.toUpperCase()],
     ),
     author: ProjectInfo(
       icon: Icons.person,
@@ -512,9 +512,7 @@ OpenBot is an open-source project that transforms a smartphone into an autonomou
     platform: ProjectInfo(
       icon: Icons.mobile_friendly,
       label: 'Available Platforms',
-      contents: [
-        _WEB,
-      ],
+      contents: [_WEB, _ANDROID, _IOS],
     ),
   ),
 ];

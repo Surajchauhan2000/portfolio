@@ -84,7 +84,10 @@ class _ProjectOverviewState extends State<ProjectOverview>
         pHeight: s5,
       ),
       <Widget>[
-        if (context.isMobile)
+        if (context.isMobile &&
+            ((widget.project.title == 'Faircado (second-hand alternatives)') ||
+                (widget.project.title == 'Naiara App') ||
+                (widget.project.title == 'OpenBot')))
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -113,20 +116,43 @@ class _ProjectOverviewState extends State<ProjectOverview>
                   SizedBox(
                     height: 20.0,
                   ),
-                  Text(
-                    "- FLUTTER",
-                    style: context
-                        .adaptive(Theme.of(context).textTheme.bodyMedium,
-                            Theme.of(context).textTheme.bodyLarge)
-                        ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
-                  ),
-                  Text(
-                    "- DART",
-                    style: context
-                        .adaptive(Theme.of(context).textTheme.bodyMedium,
-                            Theme.of(context).textTheme.bodyLarge)
-                        ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
-                  ),
+                  if (widget.project.title ==
+                          'Faircado (second-hand alternatives)' ||
+                      widget.project.title == 'OpenBot' ||
+                      widget.project.title == 'Naiara App')
+                    Text(
+                      "- FLUTTER",
+                      style: context
+                          .adaptive(Theme.of(context).textTheme.bodyMedium,
+                              Theme.of(context).textTheme.bodyLarge)
+                          ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
+                    ),
+                  if (widget.project.title ==
+                          'Faircado (second-hand alternatives)' ||
+                      widget.project.title == 'Naiara App')
+                    Text(
+                      "- DART",
+                      style: context
+                          .adaptive(Theme.of(context).textTheme.bodyMedium,
+                              Theme.of(context).textTheme.bodyLarge)
+                          ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
+                    ),
+                  if (widget.project.title == 'Naiara App')
+                    Text(
+                      "- GO",
+                      style: context
+                          .adaptive(Theme.of(context).textTheme.bodyMedium,
+                              Theme.of(context).textTheme.bodyLarge)
+                          ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
+                    ),
+                  if (widget.project.title == 'OpenBot')
+                    Text(
+                      "- REACT",
+                      style: context
+                          .adaptive(Theme.of(context).textTheme.bodyMedium,
+                              Theme.of(context).textTheme.bodyLarge)
+                          ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
+                    ),
                 ],
               ),
               SizedBox(

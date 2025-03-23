@@ -166,6 +166,9 @@ class _ProjectDetailsViewState extends State<ProjectDetailsView>
         ProjectOverview(
           project: project,
         ),
+        SizedBox(
+          height: 30,
+        ),
         ...Fun(project.images ?? [], project.title),
         SizedBox(
           height: 50,
@@ -188,7 +191,7 @@ Fun(List<String> img, String title) {
     item.add(
       Image.asset(
         img[i] ?? '',
-        fit: BoxFit.cover,
+        fit: BoxFit.contain,
       ),
     );
     SizedBox(
