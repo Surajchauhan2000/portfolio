@@ -150,7 +150,8 @@ class _IntroductionPageState extends State<IntroductionPage>
             controller: _controller,
             text: ksIntro,
             coverColor: Theme.of(context).scaffoldBackgroundColor,
-            textStyle: Theme.of(context).textTheme.bodyLarge,
+            textStyle:
+                Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 16),
             maxLines: 10,
           ),
           verticalSpaceMassive,

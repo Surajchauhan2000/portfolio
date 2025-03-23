@@ -12,14 +12,7 @@ class RouteGen {
     final arguments = settings.arguments;
     switch (settings.name) {
       case Routes.home:
-        // return _buildRoute(const HomePage(), settings: settings);
-        // todo remove this code
-        // return _buildRoute(
-        //     ProjectDetailsView(
-        //       project: ksShowcaseProjects[2],
-        //     ),
-        //     settings: settings);
-        return _buildRoute(const AboutView(), settings: settings);
+        return _buildRoute(const HomePage(), settings: settings);
       case Routes.projects:
         return _buildRoute(const ProjectsView(), settings: settings);
       // return _buildRoute(
