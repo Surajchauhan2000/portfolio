@@ -382,9 +382,7 @@ Faircado is a second-hand shopping application available in different platform l
         contents: [
           _ANDROID,
           _IOS,
-          _WINDOWS,
-          _LINUX,
-          _MAC,
+          _WEB,
         ],
       ),
       images: [

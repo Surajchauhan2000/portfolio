@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/presentation/utils/configs/constants_strings.dart';
 import 'package:portfolio/presentation/views/projects/projects_view.dart';
 
 import '../views/about/about_view.dart';
 import '../views/experience/experience_view.dart';
 import '../views/home/home_page.dart';
+import '../views/project_details/project_details_view.dart';
 import 'route_transitions.dart';
 
 class RouteGen {
@@ -11,18 +13,23 @@ class RouteGen {
     final arguments = settings.arguments;
     switch (settings.name) {
       case Routes.home:
-        return _buildRoute(const HomePage(), settings: settings);
+        // return _buildRoute(const HomePage(), settings: settings);
+        return _buildRoute(
+            ProjectDetailsView(
+              project: ksShowcaseProjects[0],
+            ),
+            settings: settings);
       case Routes.projects:
         return _buildRoute(const ProjectsView(), settings: settings);
-      // case Routes.projectDetails:
-      //   return _buildRoute(Container()
-      //       ProjectDetailsView(
-      //         project: arguments as ShowcaseProject,
-      //       ),
-      //       settings: RouteSettings(
-      //         name: '${settings.name}/${arguments.title}',
-      //       ),
-      //       );
+      // return _buildRoute(
+      //   Container(),
+      //   // ProjectDetailsView(
+      //   //   project: arguments as ShowcaseProject,
+      //   // ),
+      //   settings: RouteSettings(
+      //     name: '${settings.name}/${arguments?.title}',
+      //   ),
+      // );
       case Routes.experience:
         return _buildRoute(const ExperienceView(), settings: settings);
       case Routes.certificates:
@@ -32,7 +39,8 @@ class RouteGen {
       case Routes.contact:
       // return _buildRoute(const ContactMeView(), settings: settings);
       default:
-        return _buildRoute(const ErrorView(), settings: settings);
+        // return _buildRoute(const ErrorView(), settings: settings);
+        return _buildRoute(const HomePage(), settings: settings);
     }
   }
 

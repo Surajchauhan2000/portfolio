@@ -98,6 +98,7 @@ class _ProjectDetailsViewState extends State<ProjectDetailsView>
               position: _appBarAnimation,
               child: <Widget>[
                 AnimatedTextSlideBoxTransition(
+                  width: (context.isMobile) ? 250.0 : double.infinity,
                   controller: _titleController,
                   text: project.title,
                   maxLines: 3,
