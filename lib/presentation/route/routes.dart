@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/presentation/utils/configs/constants_strings.dart';
 import 'package:portfolio/presentation/views/projects/projects_view.dart';
 
 import '../views/about/about_view.dart';
 import '../views/experience/experience_view.dart';
 import '../views/home/home_page.dart';
-import '../views/project_details/project_details_view.dart';
 import 'route_transitions.dart';
 
 class RouteGen {
@@ -14,11 +12,13 @@ class RouteGen {
     switch (settings.name) {
       case Routes.home:
         // return _buildRoute(const HomePage(), settings: settings);
-        return _buildRoute(
-            ProjectDetailsView(
-              project: ksShowcaseProjects[2],
-            ),
-            settings: settings);
+        // todo remove this code
+        // return _buildRoute(
+        //     ProjectDetailsView(
+        //       project: ksShowcaseProjects[2],
+        //     ),
+        //     settings: settings);
+        return _buildRoute(const AboutView(), settings: settings);
       case Routes.projects:
         return _buildRoute(const ProjectsView(), settings: settings);
       // return _buildRoute(
