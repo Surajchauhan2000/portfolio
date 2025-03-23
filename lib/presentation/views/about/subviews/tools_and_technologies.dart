@@ -69,7 +69,7 @@ class ToolsAndTechnologies extends StatelessWidget {
             <Widget>[
               Text(
                 ksMobile,
-                maxLines: 3,
+                maxLines: 2,
                 softWrap: true,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(

@@ -15,7 +15,6 @@ class RouteGen {
         return _buildRoute(const HomePage(), settings: settings);
       case Routes.projects:
         return _buildRoute(const ProjectsView(), settings: settings);
-      case Routes.projectDetails:
       // return _buildRoute(
       //   Container(),
       //   // ProjectDetailsView(
@@ -32,7 +31,8 @@ class RouteGen {
       case Routes.contact:
         return _buildRoute(const ContactMeView(), settings: settings);
       default:
-        return _buildRoute(const ErrorView(), settings: settings);
+        // return _buildRoute(const ErrorView(), settings: settings);
+        return _buildRoute(const HomePage(), settings: settings);
     }
   }
 
