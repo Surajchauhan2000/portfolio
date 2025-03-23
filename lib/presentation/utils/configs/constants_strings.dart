@@ -18,7 +18,7 @@ const String ksFontFamily = "ShantellSans";
 
 const String hi = "Hi";
 const String iam = "I'm Suraj";
-const String fullstackdeveloper = "Full-stack developer";
+const String fullstackdeveloper = "Software Developer";
 const String ksTechNerd = "a  tech  nerd";
 const String ksFlutterDev = "flutter  dev";
 const String coffeeAddict = "coffee addict";

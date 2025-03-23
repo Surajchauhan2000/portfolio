@@ -45,6 +45,12 @@ dependencies:
   video_player: ^2.9.3
   video_player_web: ^2.3.4
   intl: ^0.20.2
+  geolocator: ^13.0.2
+  pretty_animated_buttons: ^0.0.2
+  firebase_core: ^3.12.1
+  cloud_firestore: ^5.6.5
+  logger: ^2.5.0
+  get_it: ^8.0.3
 
 dev_dependencies:
   flutter_test:

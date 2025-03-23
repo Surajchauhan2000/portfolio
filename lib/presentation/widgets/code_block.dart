@@ -118,27 +118,35 @@ class Editor extends StatelessWidget {
                   ),
               TypeRichText(
                 text: TextSpan(
-                  text: '\$ find / name -"life.dart"\n\n',
+                  text: '\$ developer_mindset"\n\n',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: kWhite,
                       ),
                   children: <TextSpan>[
                     TextSpan(
-                      text: '> Searching . . .\n\n',
+                      text:
+                          '> Keep learning. Keep coding. Keep pushing limits.\n\n',
                       style: TextStyle(
                         color: kSecondary,
                       ),
                     ),
                     const TextSpan(
-                      text: '> Error: No life is found!\n\n',
+                      text:
+                          '> Debugging is just solving puzzles with logic.\n\n',
                       style: TextStyle(
                         color: kRed,
                       ),
                     ),
                     const TextSpan(
-                      text: "> Since you are a programmer, you have no life!",
+                      text: "> Coffee + Code = Infinite possibilities.\n\n",
                       style: TextStyle(
-                        color: kRed,
+                        color: kGreen,
+                      ),
+                    ),
+                    const TextSpan(
+                      text: "> Let's build something amazing together!    ",
+                      style: TextStyle(
+                        color: kGreen,
                       ),
                     ),
                   ],
