@@ -241,7 +241,6 @@ _mobileImage(List<String> img, String title) {
         GestureDetector(
           onTap: () async {
             // Define your action here when the first image is clicked
-            print('First image clicked!');
             const url =
                 'https://apps.apple.com/gb/app/faircado/id6447126890?platform=iphone'; // Replace with your desired URL
             Uri uri =
