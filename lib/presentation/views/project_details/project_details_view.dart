@@ -169,7 +169,10 @@ class _ProjectDetailsViewState extends State<ProjectDetailsView>
         SizedBox(
           height: 30,
         ),
-        ...Fun(project.images ?? [], project.title),
+        if (context.isMobile)
+          ..._mobileImage(project.mobileImages ?? [], project.title)
+        else
+          ..._webImages(project.images ?? [], project.title),
         SizedBox(
           height: 50,
         ),
@@ -181,7 +184,27 @@ class _ProjectDetailsViewState extends State<ProjectDetailsView>
   }
 }
 
-Fun(List<String> img, String title) {
+_webImages(List<String> img, String title) {
+  List<Widget> item = [];
+  for (int i = 0; i < img.length; i++) {
+    if (i == 2 && title == "Faircado (second-hand alternatives)") {
+      item.add(VideoController());
+    }
+
+    item.add(
+      Image.asset(
+        img[i] ?? '',
+        fit: BoxFit.contain,
+      ),
+    );
+    SizedBox(
+      height: 100,
+    );
+  }
+  return item;
+}
+
+_mobileImage(List<String> img, String title) {
   List<Widget> item = [];
   for (int i = 0; i < img.length; i++) {
     if (i == 2 && title == "Faircado (second-hand alternatives)") {
@@ -231,43 +254,64 @@ class _VideoControllerState extends State<VideoController> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        color: Colors.white,
-        height: 800,
-        width: 550,
-        child: Stack(
-          children: [
-            // ✅ Bottom-right image
-            Padding(
-              padding: const EdgeInsets.only(top: 16.0),
-              child: Center(
-                child: _videoController.value.isInitialized
-                    ? AspectRatio(
-                        aspectRatio: _videoController.value.aspectRatio,
-                        child: VideoPlayer(_videoController),
-                      )
-                    : Center(child: const CircularProgressIndicator()),
+    if (context.isMobile)
+      return Container(
+          color: Colors.white,
+          height: 400,
+          width: 400,
+          child: Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: Center(
+                  child: _videoController.value.isInitialized
+                      ? AspectRatio(
+                          aspectRatio: _videoController.value.aspectRatio,
+                          child: VideoPlayer(_videoController),
+                        )
+                      : Center(child: const CircularProgressIndicator()),
+                ),
               ),
-            ),
-            Positioned(
-              bottom: 0,
-              right: 18,
-              child: Image.asset(
-                'assets/images/projects/faircado/one_place.png',
-                width: 600, // Adjust size as needed
-                height: 230,
+            ],
+          ));
+    else
+      return Container(
+          color: Colors.white,
+          height: 800,
+          width: 550,
+          child: Stack(
+            children: [
+              // ✅ Bottom-right image
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: Center(
+                  child: _videoController.value.isInitialized
+                      ? AspectRatio(
+                          aspectRatio: _videoController.value.aspectRatio,
+                          child: VideoPlayer(_videoController),
+                        )
+                      : Center(child: const CircularProgressIndicator()),
+                ),
               ),
-            ),
-            Positioned(
-              top: 0,
-              left: 96,
-              child: Image.asset(
-                'assets/images/projects/faircado/second_hand.png',
-                width: 500, // Adjust size as needed
-                // height: 240,
+              Positioned(
+                bottom: 0,
+                right: 18,
+                child: Image.asset(
+                  'assets/images/projects/faircado/one_place.png',
+                  width: 600, // Adjust size as needed
+                  height: 230,
+                ),
               ),
-            ),
-          ],
-        ));
+              Positioned(
+                top: 0,
+                left: 96,
+                child: Image.asset(
+                  'assets/images/projects/faircado/second_hand.png',
+                  width: 500, // Adjust size as needed
+                  // height: 240,
+                ),
+              ),
+            ],
+          ));
   }
 }

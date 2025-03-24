@@ -329,10 +329,10 @@ const String _MAC = 'MacOs';
 const String _WEB = 'Web';
 final List<ShowcaseProject> ksShowcaseProjects = [
   ShowcaseProject(
-      title: 'Faircado (second-hand alternatives)',
-      image: kaPulseX,
-      shortDescription: "Find second-hand alternatives when you shop online.",
-      description: """
+    title: 'Faircado (second-hand alternatives)',
+    image: kaPulseX,
+    shortDescription: "Find second-hand alternatives when you shop online.",
+    description: """
 Faircado is a second-hand shopping application available in different platform like android and IOS. Navigate the second-hand universe with tailored suggestions in a browser plugin. Faircado is your sustainable shopping assistant that aggregates and compares all second-hand offers to make you save time, money and CO2:
      
           - Android & iOS Cross-Platform enhancing accessibility and user experience.
@@ -340,65 +340,81 @@ Faircado is a second-hand shopping application available in different platform l
           - Implemented a notification system that alerts users when new second-hand products matching .
         
         """,
-      link: ProjectInfo(
-        icon: Icons.link,
-        label: "Project Links",
-        isLink: true,
-        contents: [
-          "https://pub.dev/packages/pulse_x",
-          "https://github.com/YeLwinOo-Steve/pulse_x",
-        ],
-      ),
-      heroTag: 'pulse-x',
-      tags: ProjectInfo(
-        icon: Icons.tag,
-        label: 'Tags',
-        isTag: true,
-        contents: [
-          'package',
-          _FLUTTER.toLowerCase(),
-          _DART.toLowerCase(),
-          'state management',
-        ],
-      ),
-      tech: ProjectInfo(
-        icon: Icons.computer,
-        label: 'Tools & Technologies',
-        contents: [
-          _FLUTTER.toUpperCase(),
-          _DART.toUpperCase(),
-        ],
-      ),
-      author: ProjectInfo(
-        icon: Icons.person,
-        label: 'Developer',
-        contents: [
-          _ME,
-        ],
-      ),
-      platform: ProjectInfo(
-        icon: Icons.laptop,
-        label: 'Available Platforms',
-        contents: [
-          _ANDROID,
-          _IOS,
-          _WEB,
-        ],
-      ),
-      images: [
-        "assets/images/projects/faircado/img.png",
-        "assets/images/projects/faircado/small_space.png",
-        "assets/images/projects/faircado/small_space.png",
-        "assets/images/projects/faircado/img1.png",
-        "assets/images/projects/faircado/small_space.png",
-        "assets/images/projects/faircado/img3.png",
-        "assets/images/projects/faircado/large_space.png",
-        "assets/images/projects/faircado/img4.png",
-        "assets/images/projects/faircado/faircado_awesom.png",
-        "assets/images/projects/faircado/our_story.png",
-        "assets/images/projects/faircado/not_do.png",
-        "assets/images/projects/faircado/img5.png"
-      ]),
+    link: ProjectInfo(
+      icon: Icons.link,
+      label: "Project Links",
+      isLink: true,
+      contents: [
+        "https://pub.dev/packages/pulse_x",
+        "https://github.com/YeLwinOo-Steve/pulse_x",
+      ],
+    ),
+    heroTag: 'pulse-x',
+    tags: ProjectInfo(
+      icon: Icons.tag,
+      label: 'Tags',
+      isTag: true,
+      contents: [
+        'package',
+        _FLUTTER.toLowerCase(),
+        _DART.toLowerCase(),
+        'state management',
+      ],
+    ),
+    tech: ProjectInfo(
+      icon: Icons.computer,
+      label: 'Tools & Technologies',
+      contents: [
+        _FLUTTER.toUpperCase(),
+        _DART.toUpperCase(),
+      ],
+    ),
+    author: ProjectInfo(
+      icon: Icons.person,
+      label: 'Developer',
+      contents: [
+        _ME,
+      ],
+    ),
+    platform: ProjectInfo(
+      icon: Icons.laptop,
+      label: 'Available Platforms',
+      contents: [
+        _ANDROID,
+        _IOS,
+        _WEB,
+      ],
+    ),
+    images: [
+      "assets/images/projects/faircado/img.png",
+      "assets/images/projects/faircado/small_space.png",
+      "assets/images/projects/faircado/small_space.png",
+      "assets/images/projects/faircado/img1.png",
+      "assets/images/projects/faircado/small_space.png",
+      "assets/images/projects/faircado/img3.png",
+      "assets/images/projects/faircado/large_space.png",
+      "assets/images/projects/faircado/img4.png",
+      "assets/images/projects/faircado/faircado_awesom.png",
+      "assets/images/projects/faircado/our_story.png",
+      "assets/images/projects/faircado/not_do.png",
+      "assets/images/projects/faircado/img5.png"
+    ],
+    mobileImages: [
+      "assets/images/projects/faircado/faircadoMobileImage/fm1.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm2.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm3.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm4.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm5.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm6.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm7.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm8.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm9.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm10.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm9.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm11.png",
+      "assets/images/projects/faircado/faircadoMobileImage/fm12.png",
+    ],
+  ),
   ShowcaseProject(
     title: 'Naiara App',
     image: kaNotee,
