@@ -105,8 +105,31 @@ flutter:
     - assets/images/introduction/triple_lines.png
     - assets/images/introduction/circle_cross.png
     - assets/images/projects/naiara/Naiara.png
+    - assets/images/projects/naiara/nairaMobile/sm1.png
+    - assets/images/projects/naiara/nairaMobile/sm2.png
+    - assets/images/projects/naiara/nairaMobile/sm3.png
+    - assets/images/projects/naiara/nairaMobile/sm4.png
+    - assets/images/projects/naiara/nairaMobile/tam1.png
+    - assets/images/projects/naiara/nairaMobile/tam2.png
+    - assets/images/projects/naiara/nairaMobile/tam3.png
+    - assets/images/projects/naiara/nairaMobile/tam4.png
+    - assets/images/projects/naiara/nairaMobile/psm1.png
+    - assets/images/projects/naiara/nairaMobile/psm2.png
+    - assets/images/projects/naiara/nairaMobile/psm3.png
+    - assets/images/projects/naiara/nairaMobile/psm4.png
     - assets/images/projects/naiara/naiaraApp.png
-    - assets/images/projects/naiara/Nai.png
+    - assets/images/projects/naiara/pa1.png
+    - assets/images/projects/naiara/pa2.png
+    - assets/images/projects/naiara/pa3.png
+    - assets/images/projects/naiara/pa4.png
+    - assets/images/projects/naiara/ps1.png
+    - assets/images/projects/naiara/ps2.png
+    - assets/images/projects/naiara/ps3.png
+    - assets/images/projects/naiara/ps4.png
+    - assets/images/projects/naiara/ta1.png
+    - assets/images/projects/naiara/ta2.png
+    - assets/images/projects/naiara/ta3.png
+    - assets/images/projects/naiara/ta4.png
     - assets/images/projects/naiara/naiaraHeader.png
     - assets/images/projects/naiara/naiaraImg1.png
     - assets/images/projects/naiara/naiaraImg2.png
