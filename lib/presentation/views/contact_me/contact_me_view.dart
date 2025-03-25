@@ -223,7 +223,10 @@ class _GetInTouchPageState extends State<GetInTouchPage>
             node: _nameNode,
             textController: _nameController,
             hintText: 'Enter Your Name',
-            width: context.percentWidth(context.adaptive(s40, s20)),
+            // width: context.percentWidth(context.adaptive(s40, s20)),
+            width: (context.isMobile)
+                ? context.percentWidth(35)
+                : context.percentWidth(35),
           ),
           context.percentSizedBox(pHeight: s8),
           AnimatedTextField(
@@ -232,7 +235,9 @@ class _GetInTouchPageState extends State<GetInTouchPage>
             hintText: 'Enter your Email Here',
             textController: _emailController,
             isEmail: true,
-            width: context.percentWidth(s30),
+            width: (context.isMobile)
+                ? context.percentWidth(45)
+                : context.percentWidth(35),
           ),
           context.percentSizedBox(pHeight: s8),
           AnimatedTextField(
@@ -240,7 +245,9 @@ class _GetInTouchPageState extends State<GetInTouchPage>
             node: _phoneNode,
             hintText: 'Enter Phone number here',
             textController: _phoneController,
-            width: context.percentWidth(s30),
+            width: (context.isMobile)
+                ? context.percentWidth(55)
+                : context.percentWidth(35),
           ),
         ].addColumn(
           // Replace addWrap() with addColumn()

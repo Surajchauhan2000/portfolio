@@ -102,162 +102,59 @@ class _WhoAmIState extends State<WhoAmI> with TickerProviderStateMixin {
 
   Widget mobileVersion() {
     return <Widget>[
-      // Positioned(
-      //   bottom: s0,
-      //   left: s0,
-      //   child: LeftStickLabel(
-      //     textController: _textController!,
-      //     stickController: _stickController!,
-      //   ),
-      // ),
-      // Positioned(
-      //   top: context.percentHeight(s10),
-      //   right: context.percentWidth(s8),
-      //   child: OutlinedText(
-      //     text: ksNobody,
-      //     strokeWidth: s1,
-      //     fontSize: s20,
-      //     strokeColor: kSecondary.withOpacity(0.3),
-      //     textColor: kTransparent,
-      //     fontWeight: FontWeight.w900,
-      //   ),
-      // ),
+      // Top Specialization Text
       Positioned(
-        top: s100,
+        top: s2,
         left: s0,
         right: s0,
         child: Container(
           margin: context.symmetricPercentPadding(hPercent: s8),
-          padding: context.percentPadding(t: s10, l: s5, r: s5, b: s5),
+          padding: context.percentPadding(t: s10, l: s10, r: s5, b: s5),
           child: const SpecializationText(),
         ),
       ),
-      // Container(
-      //   height: 600,
-      //   width: 600,
-      //   color: Colors.red,
-      //   // child: Image(
-      //   //   image: myPicture.image,
-      //   //   width: 600,
-      //   //   height: 600,
-      //   // ),
-      // ),
 
+      // Main Image Section (Increased Height)
       Positioned(
         bottom: s0,
-        left: s0,
+        left: s20,
+        top: 230,
         right: s0,
-        child: <Widget>[
-          // Positioned(
-          //   bottom: s20,
-          //   left: s0,
-          //   right: s0,
-          //   child: AspectRatio(
-          //     aspectRatio: 12 / 9,
-          //     child: Image(
-          //       image: myPicture.image,
-          //       width: 200,
-          //     ),
-          //   ),
-          // ),
-          Center(
-            child: Container(
-              height: 700,
-              width: 370,
-              margin: const EdgeInsets.only(bottom: 20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(60),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.6), // Shadow color
-                    blurRadius: 15, // Spread of shadow
-                    offset: Offset(6, 6), // Shift shadow to bottom and right
-                  ),
-                  // BoxShadow(
-                  //   color: Colors.black.withOpacity(0.5), // Shadow color
-                  //   blurRadius: 7, // Spread of shadow
-                  //   offset: Offset(-5, -5), // Shift shadow to bottom and right
-                  // ),
-                ],
+        child: Container(
+          height: context.percentHeight(80), // Increased height dynamically
+          width: 370,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.white.withOpacity(0.6), // Shadow color
+                blurRadius: 6, // Spread of shadow
+                offset: Offset(-3, -3), // Shift shadow to bottom and right
               ),
-              clipBehavior:
-                  Clip.hardEdge, // Ensures the image follows the border radius
-              child: Image(
-                image: myPicture.image,
-                fit: BoxFit.cover,
+              BoxShadow(
+                color: Colors.black.withOpacity(0.6), // Shadow color
+                blurRadius: 4, // Spread of shadow
+                offset: Offset(3, 4), // Shift shadow to bottom and right
               ),
-            ),
+            ],
           ),
-          // Positioned(
-          //   left: s50,
-          //   top: context.percentHeight(s10),
-          //   child: SlideTransition(
-          //     position: _earthSlideAnimation,
-          //     child: SvgPicture.asset(
-          //       kaEarth,
-          //       semanticsLabel: 'Earth SVG',
-          //       width: s50,
-          //       height: s50,
-          //     ),
-          //   ),
-          // ),
-          // Positioned(
-          //   right: s20,
-          //   top: context.percentHeight(s20),
-          //   child: SlideTransition(
-          //     position: _galaxySlideAnimation,
-          //     child: SvgPicture.asset(
-          //       kaGalaxy,
-          //       semanticsLabel: 'Galaxy SVG',
-          //       width: s50,
-          //       height: s50,
-          //     ),
-          //   ),
-          // ),
-        ]
-            .addStack()
-            .addSizedBox(
-              width: context.screenWidth,
-              height: context.percentHeight(s50),
-            )
-            .addPadding(
-              edgeInsets: context.percentPadding(
-                r: s6,
-              ),
-            ),
+          clipBehavior:
+              Clip.hardEdge, // Ensures the image follows the border radius
+          child: Image(
+            image: myPicture.image,
+            fit: BoxFit.cover,
+          ),
+        ).addPadding(
+          edgeInsets: context.percentPadding(r: s6),
+        ),
       ),
     ]
-        .addStack(
-          alignment: Alignment.centerLeft,
-        )
-        .addSizedBox(
-          width: context.screenWidth,
-          height: context.screenHeight -
-              Theme.of(context).appBarTheme.toolbarHeight!,
-        );
+        .addStack(alignment: Alignment.centerLeft)
+        .addSizedBox(width: context.screenWidth, height: context.screenHeight);
   }
 
   Widget desktopVersion() {
     return <Widget>[
-      // Positioned(
-      //   bottom: s0,
-      //   left: s0,
-      //   child: LeftStickLabel(
-      //     textController: _textController!,
-      //     stickController: _stickController!,
-      //   ),
-      // ),
-      // Positioned(
-      //   top: context.percentHeight(s10),
-      //   right: context.percentWidth(s8),
-      //   child: OutlinedText(
-      //     text: ksNobody,
-      //     fontSize: s100,
-      //     strokeColor: kSecondary,
-      //     textColor: kTransparent,
-      //     fontWeight: FontWeight.w900,
-      //   ),
-      // ),
       Container(
         margin: context.symmetricPercentPadding(hPercent: s8),
         padding: context.allPercentPadding(allPercent: s3),
@@ -279,11 +176,6 @@ class _WhoAmIState extends State<WhoAmI> with TickerProviderStateMixin {
                 blurRadius: 15, // Spread of shadow
                 offset: Offset(6, 6), // Shift shadow to bottom and right
               ),
-              // BoxShadow(
-              //   color: Colors.black.withOpacity(0.5), // Shadow color
-              //   blurRadius: 7, // Spread of shadow
-              //   offset: Offset(-5, -5), // Shift shadow to bottom and right
-              // ),
             ],
           ),
           clipBehavior:
@@ -293,32 +185,6 @@ class _WhoAmIState extends State<WhoAmI> with TickerProviderStateMixin {
             fit: BoxFit.cover,
           ),
         ),
-        // Positioned(
-        //   left: s0,
-        //   top: context.percentHeight(s32),
-        //   child: SlideTransition(
-        //     position: _earthSlideAnimation,
-        //     child: SvgPicture.asset(
-        //       kaEarth,
-        //       semanticsLabel: 'Earth SVG',
-        //       width: s80,
-        //       height: s80,
-        //     ),
-        //   ),
-        // ),
-        // Positioned(
-        //   right: s0,
-        //   top: context.percentHeight(s48),
-        //   child: SlideTransition(
-        //     position: _galaxySlideAnimation,
-        //     child: SvgPicture.asset(
-        //       kaGalaxy,
-        //       semanticsLabel: 'Galaxy SVG',
-        //       width: s80,
-        //       height: s80,
-        //     ),
-        //   ),
-        // ),
       ]
           .addStack(
             alignment: Alignment.bottomCenter,

@@ -81,38 +81,152 @@ class _ProjectOverviewState extends State<ProjectOverview>
         maxLines: 20,
       ),
       context.percentSizedBox(
-        pHeight: s3,
+        pHeight: s5,
       ),
       <Widget>[
-        Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                InfoSection(
-                  controller: _contentController,
-                  info: widget.project.tech,
-                ),
-                InfoSection(
-                  controller: _contentController,
-                  info: widget.project.platform,
-                ),
-              ],
-            )
-          ],
-        ),
-        // InfoSection(
-        //   controller: _contentController,
-        //   info: widget.project.tags,
-        // ),
-        // InfoSection(
-        //   controller: _contentController,
-        //   info: widget.project.link,
-        // ),
-        // InfoSection(
-        //   controller: _contentController,
-        //   info: widget.project.author,
-        // ),
+        if (context.isMobile &&
+            ((widget.project.title == 'Faircado (second-hand alternatives)') ||
+                (widget.project.title == 'Naiara App') ||
+                (widget.project.title == 'OpenBot')))
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      const Icon(Icons.laptop_chromebook),
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Text(
+                        "Tools & technology",
+                        style: context
+                            .adaptive(Theme.of(context).textTheme.bodyMedium,
+                                Theme.of(context).textTheme.bodyLarge)
+                            ?.copyWith(
+                              fontWeight: FontWeight.w700,
+                            ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  if (widget.project.title ==
+                          'Faircado (second-hand alternatives)' ||
+                      widget.project.title == 'OpenBot' ||
+                      widget.project.title == 'Naiara App')
+                    Text(
+                      "- FLUTTER",
+                      style: context
+                          .adaptive(Theme.of(context).textTheme.bodyMedium,
+                              Theme.of(context).textTheme.bodyLarge)
+                          ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
+                    ),
+                  if (widget.project.title ==
+                          'Faircado (second-hand alternatives)' ||
+                      widget.project.title == 'Naiara App')
+                    Text(
+                      "- DART",
+                      style: context
+                          .adaptive(Theme.of(context).textTheme.bodyMedium,
+                              Theme.of(context).textTheme.bodyLarge)
+                          ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
+                    ),
+                  if (widget.project.title == 'Naiara App')
+                    Text(
+                      "- GO",
+                      style: context
+                          .adaptive(Theme.of(context).textTheme.bodyMedium,
+                              Theme.of(context).textTheme.bodyLarge)
+                          ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
+                    ),
+                  if (widget.project.title == 'OpenBot')
+                    Text(
+                      "- REACT",
+                      style: context
+                          .adaptive(Theme.of(context).textTheme.bodyMedium,
+                              Theme.of(context).textTheme.bodyLarge)
+                          ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
+                    ),
+                ],
+              ),
+              SizedBox(
+                width: 30,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.laptop_chromebook),
+                      SizedBox(
+                        width: 7,
+                      ),
+                      SizedBox(
+                        width: 100,
+                        child: Text(
+                          "Available platform",
+                          style: context
+                              .adaptive(Theme.of(context).textTheme.bodyMedium,
+                                  Theme.of(context).textTheme.bodyLarge)
+                              ?.copyWith(fontWeight: FontWeight.w700),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Text(
+                    "- ANDROID",
+                    style: context
+                        .adaptive(Theme.of(context).textTheme.bodyMedium,
+                            Theme.of(context).textTheme.bodyLarge)
+                        ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
+                  ),
+                  Text(
+                    "- IOS",
+                    style: context
+                        .adaptive(Theme.of(context).textTheme.bodyMedium,
+                            Theme.of(context).textTheme.bodyLarge)
+                        ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
+                  ),
+                  Text(
+                    "- WEB",
+                    style: context
+                        .adaptive(Theme.of(context).textTheme.bodyMedium,
+                            Theme.of(context).textTheme.bodyLarge)
+                        ?.copyWith(fontWeight: FontWeight.w500, fontSize: 12),
+                  ),
+                ],
+              ),
+            ],
+          )
+        else
+          Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InfoSection(
+                    controller: _contentController,
+                    info: widget.project.tech,
+                  ),
+                  InfoSection(
+                    controller: _contentController,
+                    info: widget.project.platform,
+                  ),
+                ],
+              )
+            ],
+          ),
       ].addWrap(),
     ]
         .addColumn(

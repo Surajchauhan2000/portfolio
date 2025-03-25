@@ -120,28 +120,39 @@ class _IntroductionPageState extends State<IntroductionPage>
             controller: _controller,
             coverColor: Theme.of(context).scaffoldBackgroundColor,
             text: hi,
-            textStyle: titleTextStyle?.copyWith(fontSize: 55),
+            textStyle: titleTextStyle?.copyWith(
+                fontSize: context.isMobile
+                    ? MediaQuery.sizeOf(context).width * 0.08
+                    : 55),
           ),
           // suraj
           AnimatedTextSlideBoxTransition(
             controller: _controller,
             coverColor: Theme.of(context).scaffoldBackgroundColor,
             text: iam,
-            textStyle: titleTextStyle?.copyWith(fontSize: 55),
+            textStyle: titleTextStyle?.copyWith(
+                fontSize: context.isMobile
+                    ? MediaQuery.sizeOf(context).width * 0.07
+                    : 55),
           ),
           // suraj
           AnimatedTextSlideBoxTransition(
             controller: _controller,
             coverColor: Theme.of(context).scaffoldBackgroundColor,
             text: fullstackdeveloper,
-            textStyle: titleTextStyle?.copyWith(fontSize: 55),
+            textStyle: titleTextStyle?.copyWith(
+                fontSize: context.isMobile
+                    ? MediaQuery.sizeOf(context).width * 0.08
+                    : 55),
           ),
           verticalSpaceMassive,
           AnimatedTextSlideBoxTransition(
             controller: _controller,
             text: ksIntro,
             coverColor: Theme.of(context).scaffoldBackgroundColor,
-            textStyle: Theme.of(context).textTheme.bodyLarge,
+            textStyle: (context.isMobile)
+                ? Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 16)
+                : Theme.of(context).textTheme.bodyLarge,
             maxLines: 10,
           ),
           verticalSpaceMassive,
@@ -190,8 +201,10 @@ class _IntroductionPageState extends State<IntroductionPage>
           ),
         )
         .addSizedBox(
+          // height: context.screenHeight - context.appBarTheme().toolbarHeight!,
+          // width: context.screenWidth,
           height: context.screenHeight - context.appBarTheme().toolbarHeight!,
-          width: context.screenWidth,
+          width: MediaQuery.of(context).size.width * 0.3,
         );
   }
 }

@@ -12,6 +12,7 @@ class ShowcaseProject {
   final ProjectInfo author;
   final ProjectInfo platform;
   final List<String>? images;
+  final List<String>? mobileImages;
 
   ShowcaseProject(
       {required this.title,
@@ -24,5 +25,6 @@ class ShowcaseProject {
       required this.tech,
       required this.author,
       required this.platform,
-      this.images});
+      this.images,
+      this.mobileImages});
 }
