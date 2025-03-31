@@ -193,13 +193,18 @@ final List<Experience> ksExperiences = [
         ● Travel Bots:
           - The Travel Bot allows users to effortlessly search for flights between two locations, specify the 
             number of passengers, specific dates and book their tickets—all within the chatbot interface.
+          - Integrate fast and scalable Travelomatix API to fetch results and store in radix Database for fast 
+            access flights from DB and show to the user.
           - Integrate different seating arrangements based on different flights like Indigo, SpiceJet ..
           - User can book their flight either One-way or round trip.
-          - Implement radix Database for fast access flights from DB and show to the user.
+          - Implement filter functionality to search flights by applying filters on price or carbon emissions.
+         
           
         ● Hotel Bots:
           - The Hotel Bot allows users to effortlessly search for hotels on a specific dates and number of
             passengers.
+          - Implement two websocket connection functionality such that user can book both a Flight and a 
+            Hotel within the same chat screen.
           
         ● Shopper Bots:
           - Shopper bots allow the Users simply type a product name or upload an image, and our AI Shopper 

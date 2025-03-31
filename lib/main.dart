@@ -45,5 +45,5 @@ class TucoYe extends StatelessWidget {
     );
   }
 
-  String get initialRoute => Routes.home;
+  String get initialRoute => Routes.splashScreen;
 }
